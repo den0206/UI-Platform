@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,7 +11,29 @@
 		3A57E7F5256D2B5D00810209 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A57E7F4256D2B5D00810209 /* ContentView.swift */; };
 		3A57E7F7256D2B5E00810209 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A57E7F6256D2B5E00810209 /* Assets.xcassets */; };
 		3A57E7FA256D2B5E00810209 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A57E7F9256D2B5E00810209 /* Preview Assets.xcassets */; };
+		3A57E804256D2B9C00810209 /* CodeMirror-SwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 3A57E803256D2B9C00810209 /* CodeMirror-SwiftUI */; };
+		3A57E805256D2B9C00810209 /* CodeMirror-SwiftUI in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 3A57E803256D2B9C00810209 /* CodeMirror-SwiftUI */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		3A57E809256D2BC000810209 /* SampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A57E808256D2BC000810209 /* SampleView.swift */; };
+		3A57E80E256D2D9F00810209 /* Demo.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A57E80D256D2D9F00810209 /* Demo.txt */; };
+		3ADABB2B256E8EAD00C71FE8 /* CodeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADABB2A256E8EAD00C71FE8 /* CodeModel.swift */; };
+		3ADABB2D256E8F0400C71FE8 /* CodeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADABB2C256E8F0400C71FE8 /* CodeType.swift */; };
+		3ADABB31256E922800C71FE8 /* SourceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADABB30256E922800C71FE8 /* SourceView.swift */; };
+		3AE37B35256D3C1500AB32C8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE37B34256D3C1500AB32C8 /* HomeView.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		3A57E806256D2B9D00810209 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				3A57E805256D2B9C00810209 /* CodeMirror-SwiftUI in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		3A57E7EF256D2B5D00810209 /* UI-Platform.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UI-Platform.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -20,6 +42,12 @@
 		3A57E7F6256D2B5E00810209 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3A57E7F9256D2B5E00810209 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3A57E7FB256D2B5E00810209 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A57E808256D2BC000810209 /* SampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleView.swift; sourceTree = "<group>"; };
+		3A57E80D256D2D9F00810209 /* Demo.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Demo.txt; sourceTree = "<group>"; };
+		3ADABB2A256E8EAD00C71FE8 /* CodeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeModel.swift; sourceTree = "<group>"; };
+		3ADABB2C256E8F0400C71FE8 /* CodeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeType.swift; sourceTree = "<group>"; };
+		3ADABB30256E922800C71FE8 /* SourceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceView.swift; sourceTree = "<group>"; };
+		3AE37B34256D3C1500AB32C8 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A57E804256D2B9C00810209 /* CodeMirror-SwiftUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +82,9 @@
 			isa = PBXGroup;
 			children = (
 				3A57E7F2256D2B5D00810209 /* UI_PlatformApp.swift */,
+				3ADABB27256E8BED00C71FE8 /* Model */,
+				3A57E807256D2BB400810209 /* View */,
+				3A57E80A256D2D0600810209 /* CodeSorce */,
 				3A57E7F4256D2B5D00810209 /* ContentView.swift */,
 				3A57E7F6256D2B5E00810209 /* Assets.xcassets */,
 				3A57E7FB256D2B5E00810209 /* Info.plist */,
@@ -69,6 +101,33 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		3A57E807256D2BB400810209 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3AE37B34256D3C1500AB32C8 /* HomeView.swift */,
+				3ADABB30256E922800C71FE8 /* SourceView.swift */,
+				3A57E808256D2BC000810209 /* SampleView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3A57E80A256D2D0600810209 /* CodeSorce */ = {
+			isa = PBXGroup;
+			children = (
+				3A57E80D256D2D9F00810209 /* Demo.txt */,
+			);
+			path = CodeSorce;
+			sourceTree = "<group>";
+		};
+		3ADABB27256E8BED00C71FE8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3ADABB2A256E8EAD00C71FE8 /* CodeModel.swift */,
+				3ADABB2C256E8F0400C71FE8 /* CodeType.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -79,12 +138,16 @@
 				3A57E7EB256D2B5D00810209 /* Sources */,
 				3A57E7EC256D2B5D00810209 /* Frameworks */,
 				3A57E7ED256D2B5D00810209 /* Resources */,
+				3A57E806256D2B9D00810209 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = "UI-Platform";
+			packageProductDependencies = (
+				3A57E803256D2B9C00810209 /* CodeMirror-SwiftUI */,
+			);
 			productName = "UI-Platform";
 			productReference = 3A57E7EF256D2B5D00810209 /* UI-Platform.app */;
 			productType = "com.apple.product-type.application";
@@ -112,6 +175,9 @@
 				Base,
 			);
 			mainGroup = 3A57E7E6256D2B5D00810209;
+			packageReferences = (
+				3A57E802256D2B9C00810209 /* XCRemoteSwiftPackageReference "CodeMirror-SwiftUI" */,
+			);
 			productRefGroup = 3A57E7F0256D2B5D00810209 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -128,6 +194,7 @@
 			files = (
 				3A57E7FA256D2B5E00810209 /* Preview Assets.xcassets in Resources */,
 				3A57E7F7256D2B5E00810209 /* Assets.xcassets in Resources */,
+				3A57E80E256D2D9F00810209 /* Demo.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,7 +205,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A57E809256D2BC000810209 /* SampleView.swift in Sources */,
+				3ADABB31256E922800C71FE8 /* SourceView.swift in Sources */,
+				3ADABB2B256E8EAD00C71FE8 /* CodeModel.swift in Sources */,
+				3AE37B35256D3C1500AB32C8 /* HomeView.swift in Sources */,
 				3A57E7F5256D2B5D00810209 /* ContentView.swift in Sources */,
+				3ADABB2D256E8F0400C71FE8 /* CodeType.swift in Sources */,
 				3A57E7F3256D2B5D00810209 /* UI_PlatformApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -328,6 +400,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3A57E802256D2B9C00810209 /* XCRemoteSwiftPackageReference "CodeMirror-SwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Pictarine/CodeMirror-SwiftUI";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.1.5;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3A57E803256D2B9C00810209 /* CodeMirror-SwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3A57E802256D2B9C00810209 /* XCRemoteSwiftPackageReference "CodeMirror-SwiftUI" */;
+			productName = "CodeMirror-SwiftUI";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3A57E7E7256D2B5D00810209 /* Project object */;
 }
