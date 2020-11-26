@@ -11,6 +11,7 @@ import CodeMirror_SwiftUI
 struct SourceView: View {
     
     var codeType : CodeType
+    @State private var loading = true
     
     var body: some View {
         
@@ -19,24 +20,28 @@ struct SourceView: View {
             CodeView(theme: CodeViewTheme.birdsOfParadise,
                      code: .constant(codeType.codeBlock),
                      mode: CodeMode.swift.mode(),
-                     fontSize: 12,
+                     fontSize: 10,
                      showInvisibleCharacters : false,
                      lineWrapping: true)
                 
                 .onLoadSuccess {
                     /// indicator dismiss
+                    self.loading = false
                 }
                 .onContentChange { newCode in
-                    print("Content Change")
+                    return
                 }
                 .onLoadFail { error in
                     print("Load failed : \(error.localizedDescription)")
+                    self.loading = false
+
                 }
+                
+                
+
            
         }
-        .onAppear {
-            /// indicator
-        }
+        .loading(ishowing: $loading)
         
     
     }

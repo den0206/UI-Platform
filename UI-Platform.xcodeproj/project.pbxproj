@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A2C5E15256FEBB100A5E87D /* PlaneButtonView.swift in Resources */ = {isa = PBXBuildFile; fileRef = 3AD7D4AD256FD62F006387B0 /* PlaneButtonView.swift */; };
+		3A2C5E17256FECFA00A5E87D /* PlaneButtonView.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A2C5E16256FECFA00A5E87D /* PlaneButtonView.txt */; };
+		3A2C5E1A256FF04700A5E87D /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C5E19256FF04700A5E87D /* LoadingView.swift */; };
 		3A57E7F3256D2B5D00810209 /* UI_PlatformApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A57E7F2256D2B5D00810209 /* UI_PlatformApp.swift */; };
 		3A57E7F5256D2B5D00810209 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A57E7F4256D2B5D00810209 /* ContentView.swift */; };
 		3A57E7F7256D2B5E00810209 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A57E7F6256D2B5E00810209 /* Assets.xcassets */; };
@@ -40,6 +43,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3A2C5E16256FECFA00A5E87D /* PlaneButtonView.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = PlaneButtonView.txt; sourceTree = "<group>"; };
+		3A2C5E19256FF04700A5E87D /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		3A57E7EF256D2B5D00810209 /* UI-Platform.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UI-Platform.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A57E7F2256D2B5D00810209 /* UI_PlatformApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UI_PlatformApp.swift; sourceTree = "<group>"; };
 		3A57E7F4256D2B5D00810209 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -70,6 +75,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A2C5E18256FF03600A5E87D /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				3A2C5E19256FF04700A5E87D /* LoadingView.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		3A57E7E6256D2B5D00810209 = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +107,7 @@
 				3A57E807256D2BB400810209 /* View */,
 				3AD7D4AA256FD4B8006387B0 /* SampleViews */,
 				3A57E80A256D2D0600810209 /* CodeSorce */,
+				3A2C5E18256FF03600A5E87D /* Extension */,
 				3A57E7F4256D2B5D00810209 /* ContentView.swift */,
 				3A57E7F6256D2B5E00810209 /* Assets.xcassets */,
 				3A57E7FB256D2B5E00810209 /* Info.plist */,
@@ -127,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				3A57E80D256D2D9F00810209 /* Demo.txt */,
+				3A2C5E16256FECFA00A5E87D /* PlaneButtonView.txt */,
 			);
 			path = CodeSorce;
 			sourceTree = "<group>";
@@ -212,8 +227,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A2C5E15256FEBB100A5E87D /* PlaneButtonView.swift in Resources */,
 				3A57E7FA256D2B5E00810209 /* Preview Assets.xcassets in Resources */,
 				3A57E7F7256D2B5E00810209 /* Assets.xcassets in Resources */,
+				3A2C5E17256FECFA00A5E87D /* PlaneButtonView.txt in Resources */,
 				3A57E80E256D2D9F00810209 /* Demo.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -230,6 +247,7 @@
 				3A57E809256D2BC000810209 /* SampleView.swift in Sources */,
 				3ADABB31256E922800C71FE8 /* SourceView.swift in Sources */,
 				3ADABB2B256E8EAD00C71FE8 /* CodeModel.swift in Sources */,
+				3A2C5E1A256FF04700A5E87D /* LoadingView.swift in Sources */,
 				3AE37B35256D3C1500AB32C8 /* HomeView.swift in Sources */,
 				3ADABB35256E9B4000C71FE8 /* ExampleView.swift in Sources */,
 				3A57E7F5256D2B5D00810209 /* ContentView.swift in Sources */,

@@ -29,6 +29,8 @@ enum CodeType : CaseIterable, Identifiable{
     
     var sourceName : String {
         switch self {
+        case .PlaneButton :
+            return "PlaneButtonView"
         default :
             return "Demo"
         }
@@ -39,16 +41,26 @@ enum CodeType : CaseIterable, Identifiable{
         case .PlaneButton:
              return AnyView(PlaneButtonView())
         default:
-            return AnyView(Text("No View"))
+            return AnyView( VStack {Spacer(); Text("No Vew"); Spacer()})
         }
     }
     
     var codeBlock : String {
         
+        var fileSorce : URL
         
-        return try! String(contentsOf: Bundle.main.url(forResource: sourceName, withExtension: "txt")!)
+        if let file = Bundle.main.url(forResource: sourceName, withExtension: "txt")  {
+            
+            fileSorce = file
+        } else {
+            print("No Swift File")
+            fileSorce = Bundle.main.url(forResource: "Demo", withExtension: "txt")!
+        }
         
-//        String(contentsOf: Bundle.main.url(forResource: sourceName, withExtension: "swift")!)
+        
+        return try! String(contentsOf: fileSorce)
+        
+
     }
     
     

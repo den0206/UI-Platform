@@ -12,10 +12,8 @@ struct ExampleView: View {
     @EnvironmentObject var model : CodeModel
     
     var body: some View {
-        
         model.codeType.rootView
-       
-        
+    
     }
 }
 
