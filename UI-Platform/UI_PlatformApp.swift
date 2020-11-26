@@ -14,7 +14,7 @@ struct UI_PlatformApp: App {
     
     var body: some Scene {
         WindowGroup {
-            HomeView().environmentObject(model)
+            RootView().environmentObject(model)
         }
     }
 }

@@ -13,28 +13,37 @@ struct SourceView: View {
     var codeType : CodeType
     
     var body: some View {
-        CodeView(theme: CodeViewTheme.birdsOfParadise,
-                 code: .constant(codeType.codeBlock),
-                 mode: CodeMode.swift.mode(),
-                 fontSize: 12,
-                 showInvisibleCharacters : false,
-                 lineWrapping: true)
-            
-            .onLoadSuccess {
+        
+        VStack {
+         
+            CodeView(theme: CodeViewTheme.birdsOfParadise,
+                     code: .constant(codeType.codeBlock),
+                     mode: CodeMode.swift.mode(),
+                     fontSize: 12,
+                     showInvisibleCharacters : false,
+                     lineWrapping: true)
                 
-            }
-            .onContentChange { newCode in
-                print("Content Change")
-            }
-            .onLoadFail { error in
-                print("Load failed : \(error.localizedDescription)")
-            }
-            .disabled(true)
+                .onLoadSuccess {
+                    /// indicator dismiss
+                }
+                .onContentChange { newCode in
+                    print("Content Change")
+                }
+                .onLoadFail { error in
+                    print("Load failed : \(error.localizedDescription)")
+                }
+           
+        }
+        .onAppear {
+            /// indicator
+        }
+        
+    
     }
 }
 
 struct SourceView_Previews: PreviewProvider {
     static var previews: some View {
-        SourceView(codeType: .Button)
+        SourceView(codeType: .PlaneButton)
     }
 }

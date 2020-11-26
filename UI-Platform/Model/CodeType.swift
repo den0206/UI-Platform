@@ -6,10 +6,11 @@
 //
 
 import Foundation
+import SwiftUI
 
 enum CodeType : CaseIterable, Identifiable{
     
-    case Button
+    case PlaneButton
     case Circle
     
     var id : Int {
@@ -19,8 +20,8 @@ enum CodeType : CaseIterable, Identifiable{
     var title : String {
         switch self {
         
-        case .Button:
-            return "Button"
+        case .PlaneButton:
+            return "Plane Button"
         case .Circle:
             return "Circle"
         }
@@ -30,6 +31,15 @@ enum CodeType : CaseIterable, Identifiable{
         switch self {
         default :
             return "Demo"
+        }
+    }
+    
+    var rootView : AnyView {
+        switch self {
+        case .PlaneButton:
+             return AnyView(PlaneButtonView())
+        default:
+            return AnyView(Text("No View"))
         }
     }
     

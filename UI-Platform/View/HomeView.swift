@@ -10,56 +10,56 @@ import SwiftUI
 
 struct HomeView: View {
     
+    @Binding var showTab : Bool
+
     @EnvironmentObject var model : CodeModel
-    
     @State private var showSideMenu = false
     @State private var selectedIndex : Int = 0
-    
-    private var width = UIScreen.main.bounds.width
-    
+
+    var width = UIScreen.main.bounds.width
+
     var body: some View {
-        
+       
         ZStack {
-            
             /// Z1
             VStack {
                 HStack {
                     Spacer()
-                    
+
                     Button(action: {
                         withAnimation(.spring()) {
                             showSideMenu.toggle()
+                            showTab.toggle()
                         }
                     }, label: {
                         Image(systemName: "line.horizontal.3")
                             .font(.system(size: 22))
                             .foregroundColor(.gray)
                     })
-                    
+
                 }
                 .padding()
                 .padding(.top , 6)
                 .background(Color.white)
                 .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: 5)
-                
-                Spacer()
-                
+
                 SourceView(codeType: model.codeType)
-                
-                Spacer()
+
+
             }
-            
-            
+
+
             /// Z2
             HStack(spacing :20) {
                 Spacer()
-                
+
                 VStack {
                     HStack {
                         Spacer()
                         Button(action: {
                             withAnimation(.spring()) {
                                 showSideMenu.toggle()
+                                showTab = true
                             }
                         }, label: {
                             Image(systemName: "xmark")
@@ -69,21 +69,21 @@ struct HomeView: View {
                     }
                     .padding()
                     .padding(.top, 4)
-                    
+
                     ScrollView {
-                        
+
                         ForEach(CodeType.allCases) { type in
-                            
+
                             MenuButton(action: {selectedButton(type: type)}, type: type)
-                            
+
                         }
                     }
                     .padding(.top)
                     .padding(.leading, 40)
-                    
-                    
+
+
                     Spacer()
-                    
+
                 }
                 .frame(width : width - 100)
                 .background(Color.gray)
@@ -92,25 +92,26 @@ struct HomeView: View {
             .background(Color.black.opacity(showSideMenu ? 0.3 : 0).onTapGesture {
                 withAnimation(.spring()) {
                     self.showSideMenu.toggle()
+                    showTab = true
                 }
-                
+
             })
-            
+
         }
         .ignoresSafeArea(.all, edges: .all)
     }
     
+
     
-    //MARK: -
-    
-    private func selectedButton(type : CodeType) {
-        
+    func selectedButton(type : CodeType) {
+
         /// selef.type = type
-        
+
         withAnimation(.spring()) {
             self.showSideMenu.toggle()
+            showTab = true
         }
-        
+
         self.model.codeType = type
     }
 }
@@ -132,8 +133,3 @@ struct MenuButton : View {
     }
 }
 
-struct HomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeView()
-    }
-}

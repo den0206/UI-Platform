@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-final class CodeModel : ObservableObject {
+ class CodeModel : ObservableObject {
     
-    @Published var codeType : CodeType = .Button
+    @Published var codeType : CodeType = .PlaneButton
 }
