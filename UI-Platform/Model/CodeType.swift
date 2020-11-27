@@ -10,6 +10,7 @@ import SwiftUI
 
 enum CodeType : CaseIterable, Identifiable{
     
+    case AnalogClock
     case PlaneButton
     case Circle
     
@@ -20,6 +21,9 @@ enum CodeType : CaseIterable, Identifiable{
     var title : String {
         switch self {
         
+        case .AnalogClock :
+            return  "Analog Clock"
+        
         case .PlaneButton:
             return "Plane Button"
         case .Circle:
@@ -29,6 +33,9 @@ enum CodeType : CaseIterable, Identifiable{
     
     var sourceName : String {
         switch self {
+        
+        case .AnalogClock :
+            return "AnalogClockView"
         case .PlaneButton :
             return "PlaneButtonView"
         default :
@@ -38,6 +45,8 @@ enum CodeType : CaseIterable, Identifiable{
     
     var rootView : AnyView {
         switch self {
+        case .AnalogClock :
+            return AnyView(AnalogClockView())
         case .PlaneButton:
              return AnyView(PlaneButtonView())
         default:
@@ -61,6 +70,14 @@ enum CodeType : CaseIterable, Identifiable{
         return try! String(contentsOf: fileSorce)
         
 
+    }
+    
+    var isFirst : Bool {
+        return self == CodeType.allCases.first
+    }
+    
+    var isLast : Bool {
+        return self == CodeType.allCases.last
     }
     
     

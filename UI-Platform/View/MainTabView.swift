@@ -21,15 +21,18 @@ struct MainTabView: View {
                 switch index {
                 
                 case 0 :
-                    HomeView(showTab:$showTab)
-                    
-                case 1 :
                     ExampleView()
+        
+                case 1 :
+                    HomeView(showTab:$showTab)
+                
                 default:
                     Color.white
                     Text("No View")
                 }
             }
+            
+//            Spacer()
             
             if showTab {
                 CircularTab(index: $index)
@@ -50,13 +53,12 @@ struct CircularTab : View {
     var body: some View {
         
         HStack {
-           
-            tabButton(function: {index = 0}, systemImageName: "house", title: "Source", number: 0, index: index)
-            
+            tabButton(function: {index = 0}, systemImageName: "doc.richtext", title: "View", number: 0, index: index)
+
             Spacer(minLength: 15)
             
-            tabButton(function: {index = 1}, systemImageName: "doc.richtext", title: "View", number: 1, index: index)
-            
+            tabButton(function: {index = 1}, systemImageName: "house", title: "Source", number: 1, index: index)
+         
         }
         .padding(.top,-10)
         .padding(.horizontal,25)
