@@ -13,13 +13,9 @@ struct SourceView: View {
     @EnvironmentObject var model : CodeModel
     
     var codeType : CodeType
+    @Binding var showNav : Bool
     @State private var loading = true
-    
-    @State private var selectedTheme = 0
-    
-    var themes = CodeViewTheme.allCases.sorted {
-        return $0.rawValue < $1.rawValue
-    }
+   
     
     var body: some View {
         
@@ -28,7 +24,7 @@ struct SourceView: View {
             CodeView(theme: model.theme,
                      code: .constant(codeType.codeBlock),
                      mode: CodeMode.swift.mode(),
-                     fontSize: 10,
+                     fontSize: model.fontSize,
                      showInvisibleCharacters : false,
                      lineWrapping: true)
                 
@@ -53,7 +49,9 @@ struct SourceView: View {
         .loading(ishowing: $loading)
         .statusBar(hidden: true)
         .preferredColorScheme(.dark)
-        
+        .onDisappear {
+            self.showNav = true
+        }
         
     
     }
@@ -61,6 +59,6 @@ struct SourceView: View {
 
 struct SourceView_Previews: PreviewProvider {
     static var previews: some View {
-        SourceView(codeType: .PlaneButton)
+        SourceView(codeType: .PlaneButton, showNav: .constant(true))
     }
 }

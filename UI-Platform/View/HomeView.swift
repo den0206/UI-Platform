@@ -6,17 +6,19 @@
 //
 
 import SwiftUI
+import CodeMirror_SwiftUI
 
 
 struct HomeView: View {
     
     @Binding var showTab : Bool
-
     @EnvironmentObject var model : CodeModel
+
     @State private var showSideMenu = false
     @State private var selectedIndex : Int = 0
 
     var width = UIScreen.main.bounds.width
+
 
     var body: some View {
        
@@ -40,10 +42,10 @@ struct HomeView: View {
                 }
                 .padding()
                 .padding(.top , 6)
-                .background(Color.white)
+                .background(Color.clear)
                 .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: 5)
 
-                SourceView(codeType: model.codeType)
+                SourceView(codeType: model.codeType, showNav: $showTab)
 
 
             }
@@ -69,15 +71,34 @@ struct HomeView: View {
                     }
                     .padding()
                     .padding(.top, 4)
-
-                    ScrollView {
-
-                        ForEach(CodeType.allCases) { type in
-
-                            MenuButton(action: {selectedButton(type: type)}, type: type)
-
+                    
+                    VStack(spacing :4) {
+                        
+                        Text("Font Size")
+                           
+                        Picker(selection: $model.fontSize, label: Text("")) {
+                            ForEach(4 ..< 25, id : \.self) { i in
+                                Text("\(i)")
+                                    .foregroundColor(.black)
+                            }
                         }
+                        
+                        .labelsHidden()
+           
+                        Text("Code Theme")
+                        
+                        Picker(selection: $model.themeIndex, label: Text("")) {
+                            ForEach(0 ..< model.themes.count) { i in
+                                Text("\(model.themes[i].rawValue)")
+                                    .foregroundColor(.black)
+                            }
+                        }
+                    
+                        .labelsHidden()
+                        
                     }
+                    .foregroundColor(.black)
+                    
                     .padding(.top)
                     .padding(.leading, 40)
 
@@ -98,6 +119,7 @@ struct HomeView: View {
             })
 
         }
+        
         .ignoresSafeArea(.all, edges: .all)
     }
     

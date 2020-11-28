@@ -134,9 +134,9 @@
 			children = (
 				3ADABB32256E9AC100C71FE8 /* RootView.swift */,
 				3AD7D4A7256FC8F2006387B0 /* MainTabView.swift */,
-				3ADABB30256E922800C71FE8 /* SourceView.swift */,
-				3ACD1DE22571E9A00062B4D9 /* CodeListsView.swift */,
 				3ADABB34256E9B4000C71FE8 /* ExampleView.swift */,
+				3ACD1DE22571E9A00062B4D9 /* CodeListsView.swift */,
+				3ADABB30256E922800C71FE8 /* SourceView.swift */,
 				3AE37B34256D3C1500AB32C8 /* HomeView.swift */,
 				3A57E808256D2BC000810209 /* SampleView.swift */,
 				3AD7D4AA256FD4B8006387B0 /* SampleViews */,

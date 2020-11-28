@@ -39,6 +39,7 @@ struct ExampleView: View {
                     }
                 }))
                 
+                .navigationTitle(model.codeType.title)
                 .navigationBarTitleDisplayMode(.inline)
         }
         

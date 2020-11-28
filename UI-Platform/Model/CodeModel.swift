@@ -14,9 +14,21 @@ final class CodeModel : ObservableObject {
     @Published var typeIndex : Int = 0
     @Published var codeType : CodeType = CodeType.allCases.first!
     
-    @Published var theme : CodeViewTheme = .birdsOfParadise
+    @AppStorage("fontSize") var fontSize : Int = 10
+    
+    /// start Theme - "birdsOfParadise"
+    @AppStorage("themeIndex") var themeIndex : Int = 8
+    
+    var themes = CodeViewTheme.allCases.sorted {
+        return $0.rawValue < $1.rawValue
+    }
+    
+    var theme : CodeViewTheme {
+        return themes[themeIndex]
+    }
     
     private var allTypes = CodeType.allCases
+    
     
     func nextPage() {
         

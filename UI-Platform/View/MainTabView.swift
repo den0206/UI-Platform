@@ -27,7 +27,7 @@ struct MainTabView: View {
                     CodeListsView()
         
                 case 2 :
-                    SourceView(codeType: model.codeType)
+                    HomeView(showTab: $showTab)
                 
                 default:
                     Color.white
@@ -35,9 +35,6 @@ struct MainTabView: View {
                 }
             }
            
-            
-//            Spacer()
-            
             if showTab {
                 CircularTab(index: $index)
                     .frame(height: 70)
@@ -134,8 +131,9 @@ struct tabButton : View {
                   
                     }
                     
-                    Text(title)
-                        .foregroundColor(Color.primary.opacity(0.8))
+                   
+                        Text(title)
+                            .foregroundColor(Color.primary.opacity(0.8))
                 
                 }
             }
