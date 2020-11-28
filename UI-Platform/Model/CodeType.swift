@@ -11,8 +11,8 @@ import SwiftUI
 enum CodeType : CaseIterable, Identifiable{
     
     case AnalogClock
-    case PlaneButton
-    case Circle
+    case PieChart
+    case Circular_Slider
     
     var id : Int {
         hashValue
@@ -23,11 +23,10 @@ enum CodeType : CaseIterable, Identifiable{
         
         case .AnalogClock :
             return  "Analog Clock"
-        
-        case .PlaneButton:
-            return "Plane Button"
-        case .Circle:
-            return "Circle"
+        case .PieChart:
+            return "Pie Chart"
+        case .Circular_Slider:
+            return "Circular Slider"
         }
     }
     
@@ -36,10 +35,11 @@ enum CodeType : CaseIterable, Identifiable{
         
         case .AnalogClock :
             return "AnalogClockView"
-        case .PlaneButton :
-            return "PlaneButtonView"
-        default :
-            return "Demo"
+        case .PieChart :
+            return "PieChartView"
+        case .Circular_Slider :
+            return "Circular_SliderView"
+     
         }
     }
     
@@ -47,10 +47,11 @@ enum CodeType : CaseIterable, Identifiable{
         switch self {
         case .AnalogClock :
             return AnyView(AnalogClockView())
-        case .PlaneButton:
-             return AnyView(PlaneButtonView())
-        default:
-            return AnyView( VStack {Spacer(); Text("No Vew"); Spacer()})
+        case .PieChart:
+             return AnyView(PieChartView())
+        case .Circular_Slider :
+            return AnyView(Circular_SliderView())
+    
         }
     }
     

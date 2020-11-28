@@ -10,6 +10,9 @@
 		3A2C5E15256FEBB100A5E87D /* PlaneButtonView.swift in Resources */ = {isa = PBXBuildFile; fileRef = 3AD7D4AD256FD62F006387B0 /* PlaneButtonView.swift */; };
 		3A2C5E17256FECFA00A5E87D /* PlaneButtonView.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A2C5E16256FECFA00A5E87D /* PlaneButtonView.txt */; };
 		3A2C5E1A256FF04700A5E87D /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C5E19256FF04700A5E87D /* LoadingView.swift */; };
+		3A48FE8A257236010055BA9F /* Circular_SliderView.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A48FE89257236010055BA9F /* Circular_SliderView.txt */; };
+		3A48FE8D25723A650055BA9F /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A48FE8C25723A650055BA9F /* PieChartView.swift */; };
+		3A48FE8F25723CA60055BA9F /* PieChartView.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A48FE8E25723CA60055BA9F /* PieChartView.txt */; };
 		3A57E7F3256D2B5D00810209 /* UI_PlatformApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A57E7F2256D2B5D00810209 /* UI_PlatformApp.swift */; };
 		3A57E7F5256D2B5D00810209 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A57E7F4256D2B5D00810209 /* ContentView.swift */; };
 		3A57E7F7256D2B5E00810209 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A57E7F6256D2B5E00810209 /* Assets.xcassets */; };
@@ -20,6 +23,7 @@
 		3A57E80E256D2D9F00810209 /* Demo.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A57E80D256D2D9F00810209 /* Demo.txt */; };
 		3AAEBA2E25711A3800500142 /* AnalogClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAEBA2D25711A3800500142 /* AnalogClockView.swift */; };
 		3AAEBA302571237F00500142 /* AnalogClockView.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3AAEBA2F2571237F00500142 /* AnalogClockView.txt */; };
+		3ABB640A2572316C002E2AA6 /* Circular_SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABB64092572316C002E2AA6 /* Circular_SliderView.swift */; };
 		3ACD1DE32571E9A00062B4D9 /* CodeListsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACD1DE22571E9A00062B4D9 /* CodeListsView.swift */; };
 		3AD7D4A8256FC8F2006387B0 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD7D4A7256FC8F2006387B0 /* MainTabView.swift */; };
 		3AD7D4AE256FD62F006387B0 /* PlaneButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD7D4AD256FD62F006387B0 /* PlaneButtonView.swift */; };
@@ -48,6 +52,9 @@
 /* Begin PBXFileReference section */
 		3A2C5E16256FECFA00A5E87D /* PlaneButtonView.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = PlaneButtonView.txt; sourceTree = "<group>"; };
 		3A2C5E19256FF04700A5E87D /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		3A48FE89257236010055BA9F /* Circular_SliderView.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Circular_SliderView.txt; sourceTree = "<group>"; };
+		3A48FE8C25723A650055BA9F /* PieChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
+		3A48FE8E25723CA60055BA9F /* PieChartView.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = PieChartView.txt; sourceTree = "<group>"; };
 		3A57E7EF256D2B5D00810209 /* UI-Platform.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "UI-Platform.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A57E7F2256D2B5D00810209 /* UI_PlatformApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UI_PlatformApp.swift; sourceTree = "<group>"; };
 		3A57E7F4256D2B5D00810209 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -58,6 +65,7 @@
 		3A57E80D256D2D9F00810209 /* Demo.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Demo.txt; sourceTree = "<group>"; };
 		3AAEBA2D25711A3800500142 /* AnalogClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalogClockView.swift; sourceTree = "<group>"; };
 		3AAEBA2F2571237F00500142 /* AnalogClockView.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = AnalogClockView.txt; sourceTree = "<group>"; };
+		3ABB64092572316C002E2AA6 /* Circular_SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Circular_SliderView.swift; sourceTree = "<group>"; };
 		3ACD1DE22571E9A00062B4D9 /* CodeListsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeListsView.swift; sourceTree = "<group>"; };
 		3AD7D4A7256FC8F2006387B0 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		3AD7D4AD256FD62F006387B0 /* PlaneButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaneButtonView.swift; sourceTree = "<group>"; };
@@ -87,6 +95,15 @@
 				3A2C5E19256FF04700A5E87D /* LoadingView.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		3A48FE8B25723A4B0055BA9F /* PieChart */ = {
+			isa = PBXGroup;
+			children = (
+				3A48FE8C25723A650055BA9F /* PieChartView.swift */,
+				3A48FE8E25723CA60055BA9F /* PieChartView.txt */,
+			);
+			path = PieChart;
 			sourceTree = "<group>";
 		};
 		3A57E7E6256D2B5D00810209 = {
@@ -170,11 +187,22 @@
 			path = AnalogClock;
 			sourceTree = "<group>";
 		};
+		3ABB640B2572316E002E2AA6 /* CircularSlider */ = {
+			isa = PBXGroup;
+			children = (
+				3ABB64092572316C002E2AA6 /* Circular_SliderView.swift */,
+				3A48FE89257236010055BA9F /* Circular_SliderView.txt */,
+			);
+			path = CircularSlider;
+			sourceTree = "<group>";
+		};
 		3AD7D4AA256FD4B8006387B0 /* SampleViews */ = {
 			isa = PBXGroup;
 			children = (
 				3AAEBA2C25711A1400500142 /* AnalogClock */,
 				3AAAB93C257110C600F58048 /* PlaneButtonView */,
+				3ABB640B2572316E002E2AA6 /* CircularSlider */,
+				3A48FE8B25723A4B0055BA9F /* PieChart */,
 			);
 			path = SampleViews;
 			sourceTree = "<group>";
@@ -253,10 +281,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				3A2C5E15256FEBB100A5E87D /* PlaneButtonView.swift in Resources */,
+				3A48FE8F25723CA60055BA9F /* PieChartView.txt in Resources */,
 				3A57E7FA256D2B5E00810209 /* Preview Assets.xcassets in Resources */,
 				3A57E7F7256D2B5E00810209 /* Assets.xcassets in Resources */,
 				3A2C5E17256FECFA00A5E87D /* PlaneButtonView.txt in Resources */,
 				3AAEBA302571237F00500142 /* AnalogClockView.txt in Resources */,
+				3A48FE8A257236010055BA9F /* Circular_SliderView.txt in Resources */,
 				3A57E80E256D2D9F00810209 /* Demo.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -268,6 +298,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3ABB640A2572316C002E2AA6 /* Circular_SliderView.swift in Sources */,
 				3AAEBA2E25711A3800500142 /* AnalogClockView.swift in Sources */,
 				3ADABB33256E9AC100C71FE8 /* RootView.swift in Sources */,
 				3AD7D4A8256FC8F2006387B0 /* MainTabView.swift in Sources */,
@@ -275,6 +306,7 @@
 				3ADABB31256E922800C71FE8 /* SourceView.swift in Sources */,
 				3ADABB2B256E8EAD00C71FE8 /* CodeModel.swift in Sources */,
 				3A2C5E1A256FF04700A5E87D /* LoadingView.swift in Sources */,
+				3A48FE8D25723A650055BA9F /* PieChartView.swift in Sources */,
 				3AE37B35256D3C1500AB32C8 /* HomeView.swift in Sources */,
 				3ADABB35256E9B4000C71FE8 /* ExampleView.swift in Sources */,
 				3A57E7F5256D2B5D00810209 /* ContentView.swift in Sources */,

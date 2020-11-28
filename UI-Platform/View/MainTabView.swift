@@ -12,7 +12,6 @@ struct MainTabView: View {
     @EnvironmentObject var model : CodeModel
     
     @State private var index = 0
-    @State private var showTab = true
     
     var body: some View {
         
@@ -27,7 +26,7 @@ struct MainTabView: View {
                     CodeListsView()
         
                 case 2 :
-                    HomeView(showTab: $showTab)
+                    HomeView()
                 
                 default:
                     Color.white
@@ -35,7 +34,7 @@ struct MainTabView: View {
                 }
             }
            
-            if showTab {
+            if model.showTab{
                 CircularTab(index: $index)
                     .frame(height: 70)
                     .animation(.spring())
@@ -89,12 +88,15 @@ struct tabButton : View {
             Button(action: {self.function()}) {
                 
                 VStack {
+                    
                     if index != number {
                         
                         if systemImageName != nil {
                             Image(systemName: systemImageName!)
                                 .font(.system(size: 22))
                                 .foregroundColor(.gray)
+                                .padding(.top,3)
+                            
                             
                         } else {
                             Image(imageName!)
@@ -102,6 +104,8 @@ struct tabButton : View {
                                 .renderingMode(.template)
                                 .foregroundColor(.gray)
                                 .frame(width: 30, height: 30)
+                                .padding(.top,3)
+                            
                         }
                         
                         

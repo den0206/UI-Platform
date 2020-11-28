@@ -13,7 +13,6 @@ struct SourceView: View {
     @EnvironmentObject var model : CodeModel
     
     var codeType : CodeType
-    @Binding var showNav : Bool
     @State private var loading = true
    
     
@@ -44,13 +43,13 @@ struct SourceView: View {
             Spacer()
                 
 
-           
+            
         }
         .loading(ishowing: $loading)
         .statusBar(hidden: true)
         .preferredColorScheme(.dark)
         .onDisappear {
-            self.showNav = true
+            model.showTab = true
         }
         
     
@@ -59,6 +58,6 @@ struct SourceView: View {
 
 struct SourceView_Previews: PreviewProvider {
     static var previews: some View {
-        SourceView(codeType: .PlaneButton, showNav: .constant(true))
+        SourceView(codeType: .PieChart)
     }
 }

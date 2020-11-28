@@ -31,9 +31,17 @@ struct LoadingView<Presenting>: View where Presenting : View{
                 .background(Color.black.opacity(0.7).opacity(isShowing ? 1 : 0))
             
             
-            ActivityIndicator(isAnimating: $isShowing, style: .large, color: .white)
-                .opacity((isShowing ? 1 : 0))
-            
+            VStack(spacing :4){
+                
+                ActivityIndicator(isAnimating: $isShowing, style: .large, color: .white)
+                
+                Text("Loading...")
+                    .foregroundColor(.primary)
+                    
+                
+            }
+            .opacity((isShowing ? 1 : 0))
+        
             
             
         }

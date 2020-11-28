@@ -11,7 +11,6 @@ import CodeMirror_SwiftUI
 
 struct HomeView: View {
     
-    @Binding var showTab : Bool
     @EnvironmentObject var model : CodeModel
 
     @State private var showSideMenu = false
@@ -26,12 +25,23 @@ struct HomeView: View {
             /// Z1
             VStack {
                 HStack {
+                    
+                    Button(action: {
+                        withAnimation(.spring()) {
+                            model.showTab.toggle()
+                        }
+                    }) {
+                        
+                       
+                        Text(model.showTab ? "Hide Tab" : "Show Tab")
+                            .foregroundColor(.primary)
+                    }
                     Spacer()
 
                     Button(action: {
                         withAnimation(.spring()) {
                             showSideMenu.toggle()
-                            showTab.toggle()
+                            model.showTab = false
                         }
                     }, label: {
                         Image(systemName: "line.horizontal.3")
@@ -45,7 +55,7 @@ struct HomeView: View {
                 .background(Color.clear)
                 .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: 5)
 
-                SourceView(codeType: model.codeType, showNav: $showTab)
+                SourceView(codeType: model.codeType)
 
 
             }
@@ -61,7 +71,7 @@ struct HomeView: View {
                         Button(action: {
                             withAnimation(.spring()) {
                                 showSideMenu.toggle()
-                                showTab = true
+                                model.showTab = true
                             }
                         }, label: {
                             Image(systemName: "xmark")
@@ -75,6 +85,7 @@ struct HomeView: View {
                     VStack(spacing :4) {
                         
                         Text("Font Size")
+                            .underline()
                            
                         Picker(selection: $model.fontSize, label: Text("")) {
                             ForEach(4 ..< 25, id : \.self) { i in
@@ -86,6 +97,7 @@ struct HomeView: View {
                         .labelsHidden()
            
                         Text("Code Theme")
+                            .underline()
                         
                         Picker(selection: $model.themeIndex, label: Text("")) {
                             ForEach(0 ..< model.themes.count) { i in
@@ -113,13 +125,51 @@ struct HomeView: View {
             .background(Color.black.opacity(showSideMenu ? 0.3 : 0).onTapGesture {
                 withAnimation(.spring()) {
                     self.showSideMenu.toggle()
-                    showTab = true
+                    model.showTab = true
                 }
 
             })
-
+            
         }
-        
+        .gesture(DragGesture().onChanged({ (value) in
+            
+            if value.startLocation.y < value.location.y{
+            Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false) { _ in
+                    withAnimation(.spring()) {
+                        print("call")
+                        model.showTab = true
+                    }
+                }
+            }
+            if value.startLocation.y > value.location.y{
+            
+                Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false) { _ in
+                    withAnimation(.spring()) {
+
+                        model.showTab = false
+                    }
+                }
+                
+            }
+            
+        }).onEnded({ (value) in
+            
+          
+            if (abs(value.translation.width) < 10) {return}
+            
+            if (value.translation.width < 0) {
+                withAnimation(.spring()) {
+                    showSideMenu = true
+                    model.showTab = false
+                }
+            } else {
+                withAnimation(.spring()) {
+                    showSideMenu = false
+                    model.showTab = true
+                }
+            }
+        }))
+     
         .ignoresSafeArea(.all, edges: .all)
     }
     
@@ -131,11 +181,13 @@ struct HomeView: View {
 
         withAnimation(.spring()) {
             self.showSideMenu.toggle()
-            showTab = true
+            model.showTab = true
         }
 
         self.model.codeType = type
     }
+    
+    
 }
 
 struct MenuButton : View {

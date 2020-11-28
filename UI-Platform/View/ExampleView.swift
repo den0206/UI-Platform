@@ -28,11 +28,11 @@ struct ExampleView: View {
                             .opacity(model.codeType.isLast ? 0 : 1)
                     }
                 )
-                .highPriorityGesture(DragGesture().onEnded({ (value) in
-                    
+                .gesture(DragGesture().onEnded({ (value) in
+
                     if (abs(value.translation.width) < 10) {return}
-                    
-                    if (value.translation.width < 0) {
+
+                    if (value.translation.width > 0) {
                         model.previewPage()
                     } else {
                         model.nextPage()

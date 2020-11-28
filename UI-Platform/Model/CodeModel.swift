@@ -11,6 +11,7 @@ import CodeMirror_SwiftUI
 
 final class CodeModel : ObservableObject {
     
+    @Published var showTab : Bool = true
     @Published var typeIndex : Int = 0
     @Published var codeType : CodeType = CodeType.allCases.first!
     
@@ -56,4 +57,6 @@ final class CodeModel : ObservableObject {
         self.codeType = type
     
     }
+    
+ 
 }
