@@ -7,32 +7,41 @@
 
 import Foundation
 import SwiftUI
+import CodeMirror_SwiftUI
 
- class CodeModel : ObservableObject {
+final class CodeModel : ObservableObject {
     
-    @Published var codeType : CodeType = .AnalogClock
+    @Published var typeIndex : Int = 0
+    @Published var codeType : CodeType = CodeType.allCases.first!
     
-    func nextCodeType() {
+    @Published var theme : CodeViewTheme = .birdsOfParadise
+    
+    private var allTypes = CodeType.allCases
+    
+    func nextPage() {
         
-        switch codeType {
-        case .AnalogClock :
-            self.codeType = .PlaneButton
-        case .PlaneButton :
-            self.codeType = .Circle
-        case .Circle :
-            return
+        guard typeIndex >= 0 else {return}
+        
+        if typeIndex < allTypes.count - 1{
+            typeIndex += 1
+            self.codeType = allTypes[typeIndex]
         }
     }
     
-    func previewCodeType() {
+    func previewPage() {
         
-        switch codeType {
-        case .AnalogClock :
-            return
-        case .PlaneButton :
-            self.codeType = .AnalogClock
-        case .Circle :
-            self.codeType = .PlaneButton
-        }
+        guard typeIndex > 0 else {return}
+        
+        typeIndex -= 1
+        self.codeType = allTypes[typeIndex]
+        
+
+    }
+    
+    func setType(type : CodeType) {
+        
+        self.typeIndex = allTypes.firstIndex(of: type)!
+        self.codeType = type
+    
     }
 }

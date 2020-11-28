@@ -10,14 +10,22 @@ import CodeMirror_SwiftUI
 
 struct SourceView: View {
     
+    @EnvironmentObject var model : CodeModel
+    
     var codeType : CodeType
     @State private var loading = true
+    
+    @State private var selectedTheme = 0
+    
+    var themes = CodeViewTheme.allCases.sorted {
+        return $0.rawValue < $1.rawValue
+    }
     
     var body: some View {
         
         VStack {
-         
-            CodeView(theme: CodeViewTheme.birdsOfParadise,
+            
+            CodeView(theme: model.theme,
                      code: .constant(codeType.codeBlock),
                      mode: CodeMode.swift.mode(),
                      fontSize: 10,
@@ -37,11 +45,15 @@ struct SourceView: View {
 
                 }
                 
+            Spacer()
                 
 
            
         }
         .loading(ishowing: $loading)
+        .statusBar(hidden: true)
+        .preferredColorScheme(.dark)
+        
         
     
     }

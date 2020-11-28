@@ -12,49 +12,34 @@ struct ExampleView: View {
     @EnvironmentObject var model : CodeModel
     
     var body: some View {
-        
-        //BUG: - No reflect toolbar color
-        
+                
         NavigationView {
             
             model.codeType.rootView
-                .toolbar {
-                    ToolbarItem(placement: .navigationBarLeading) {
-                        if !model.codeType.isFirst {
-                            
-                            Button(action: {model.previewCodeType()}) {
-                                Image(systemName: "arrow.left.square.fill")
-                                    .foregroundColor(.black)
-                            }
-                        }
-                        
-                        
+                .navigationBarItems(leading:
+                  Button(action: {model.previewPage()}) {
+                    Image(systemName: "arrow.left.square.fill")
+                        .foregroundColor(.primary)
+                        .opacity(model.codeType.isFirst ? 0 : 1)
+                  },trailing:
+                    Button(action: {model.nextPage()}) {
+                        Image(systemName: "arrow.right.square.fill")
+                            .foregroundColor(.primary)
+                            .opacity(model.codeType.isLast ? 0 : 1)
                     }
-                    
-                   
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        if !model.codeType.isLast {
-                            Button(action: {model.nextCodeType()}) {
-                                Image(systemName: "arrow.right.square.fill")
-                                    .foregroundColor(.black)
-                            }
-                        }
-                    }
-                    
-                }
+                )
                 .highPriorityGesture(DragGesture().onEnded({ (value) in
                     
                     if (abs(value.translation.width) < 10) {return}
                     
                     if (value.translation.width < 0) {
-                        model.previewCodeType()
+                        model.previewPage()
                     } else {
-                        model.nextCodeType()
+                        model.nextPage()
                     }
                 }))
-            
-                .navigationBarHidden(true)
-                                
+                
+                .navigationBarTitleDisplayMode(.inline)
         }
         
        

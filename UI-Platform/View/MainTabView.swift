@@ -22,15 +22,19 @@ struct MainTabView: View {
                 
                 case 0 :
                     ExampleView()
-        
+                    
                 case 1 :
-                    HomeView(showTab:$showTab)
+                    CodeListsView()
+        
+                case 2 :
+                    SourceView(codeType: model.codeType)
                 
                 default:
                     Color.white
                     Text("No View")
                 }
             }
+           
             
 //            Spacer()
             
@@ -43,6 +47,7 @@ struct MainTabView: View {
         }
         .edgesIgnoringSafeArea(.all)
         
+        
     }
 }
 
@@ -54,10 +59,14 @@ struct CircularTab : View {
         
         HStack {
             tabButton(function: {index = 0}, systemImageName: "doc.richtext", title: "View", number: 0, index: index)
+            
+            Spacer(minLength : 15)
+            
+            tabButton(function: {index = 1}, systemImageName: "list.number", title: "Code List", number: 1, index: index)
 
             Spacer(minLength: 15)
             
-            tabButton(function: {index = 1}, systemImageName: "house", title: "Source", number: 1, index: index)
+            tabButton(function: {index = 2}, systemImageName: "chevron.left.slash.chevron.right", title: "Source", number: 2, index: index)
          
         }
         .padding(.top,-10)
@@ -82,55 +91,59 @@ struct tabButton : View {
         VStack {
             Button(action: {self.function()}) {
                 
-                if index != number {
-                    
-                    if systemImageName != nil {
-                        Image(systemName: systemImageName!)
-                            .font(.system(size: 22))
-                            .foregroundColor(.gray)
+                VStack {
+                    if index != number {
+                        
+                        if systemImageName != nil {
+                            Image(systemName: systemImageName!)
+                                .font(.system(size: 22))
+                                .foregroundColor(.gray)
+                            
+                        } else {
+                            Image(imageName!)
+                                .resizable()
+                                .renderingMode(.template)
+                                .foregroundColor(.gray)
+                                .frame(width: 30, height: 30)
+                        }
+                        
+                        
                         
                     } else {
-                        Image(imageName!)
-                            .resizable()
-                            .renderingMode(.template)
-                            .foregroundColor(.gray)
-                            .frame(width: 30, height: 30)
+                        
+                        if systemImageName != nil {
+                            Image(systemName: systemImageName!)
+                                .frame(width: 25, height: 23)
+                                .foregroundColor(.white)
+                                .padding()
+                                .background(Color.gray)
+                                .clipShape(Circle())
+                                
+                        } else {
+                            Image(imageName!)
+                                .resizable()
+                                .renderingMode(.template)
+                                .foregroundColor(.white)
+                                .frame(width: 30, height: 30)
+                                .padding()
+                                .background(Color.green)
+                                .clipShape(Circle())
+                                .offset(y : -20)
+                                
+                        }
+                  
                     }
                     
-                    
-                    
-                } else {
-                    
-                    if systemImageName != nil {
-                        Image(systemName: systemImageName!)
-                            .frame(width: 25, height: 23)
-                            .foregroundColor(.white)
-                            .padding()
-                            .background(Color.green)
-                            .clipShape(Circle())
-                            .padding(.bottom, 30)
-                    } else {
-                        Image(imageName!)
-                            .resizable()
-                            .renderingMode(.template)
-                            .foregroundColor(.white)
-                            .frame(width: 30, height: 30)
-                            .padding()
-                            .background(Color.green)
-                            .clipShape(Circle())
-                            .offset(y : -20)
-                            .padding(.bottom, 30)
-                    }
-              
-                }
+                    Text(title)
+                        .foregroundColor(Color.primary.opacity(0.8))
                 
-                Text(title)
-                    .foregroundColor(Color.black.opacity(0.8))
+                }
             }
             
-      
+           
+               
             
-            
+          
         }
     }
     
