@@ -13,6 +13,8 @@ enum CodeType : CaseIterable, Identifiable{
     case AnalogClock
     case PieChart
     case Circular_Slider
+    case DairyChart
+    case DashBoard
     
     var id : Int {
         hashValue
@@ -27,6 +29,10 @@ enum CodeType : CaseIterable, Identifiable{
             return "Pie Chart"
         case .Circular_Slider:
             return "Circular Slider"
+        case .DairyChart :
+            return "Dairy Charts"
+        case .DashBoard :
+            return "Dash Board"
         }
     }
     
@@ -39,11 +45,16 @@ enum CodeType : CaseIterable, Identifiable{
             return "PieChartView"
         case .Circular_Slider :
             return "Circular_SliderView"
+        case .DairyChart :
+            return "Dairy_ChartsView"
+        case . DashBoard :
+            return "DashboardView"
      
         }
     }
     
     var rootView : AnyView {
+        
         switch self {
         case .AnalogClock :
             return AnyView(AnalogClockView())
@@ -51,6 +62,10 @@ enum CodeType : CaseIterable, Identifiable{
              return AnyView(PieChartView())
         case .Circular_Slider :
             return AnyView(Circular_SliderView())
+        case .DairyChart :
+            return AnyView(DairyChartsView())
+        case . DashBoard :
+            return AnyView(DashBoardView())
     
         }
     }

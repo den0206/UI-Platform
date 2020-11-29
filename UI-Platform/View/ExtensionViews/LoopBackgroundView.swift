@@ -10,7 +10,7 @@ import SwiftUI
 struct LoopBackgroundView: View {
     var body: some View {
         LoopMovieView()
-            .overlay(Color.black.opacity(0.5))
+            .overlay(Color.white.opacity(0.5))
             .blur(radius: 1)
             .edgesIgnoringSafeArea(.all)
     }

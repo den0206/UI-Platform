@@ -135,7 +135,7 @@ struct HomeView: View {
                  })
                  
              }
-             .gesture(DragGesture().onChanged(upDownValue(value:)).onEnded(leftRightValue(value:)))
+             .gesture(DragGesture().onEnded(leftRightValue(value:)))
              .ignoresSafeArea(.all, edges: .all)
             
         } else {

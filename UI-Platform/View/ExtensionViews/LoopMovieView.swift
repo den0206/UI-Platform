@@ -29,9 +29,9 @@ final class LoopPlayerView : UIView {
         
         super.init(frame: frame)
         
-        let iValue = Int.random(in: 1 ... 19)
+        let iValue = Int.random(in: 1 ... 2)
         
-        guard let fileUrl = Bundle.main.url(forResource: "training-\(iValue)", withExtension: "mp4") else {
+        guard let fileUrl = Bundle.main.url(forResource: "code-\(iValue)", withExtension: "mp4") else {
             print("no URL")
             return
         }

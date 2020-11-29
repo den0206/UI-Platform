@@ -38,12 +38,7 @@ struct SourceView: View {
                     self.loading = false
 
                 }
-                .onTapGesture {
-                    UIApplication.shared.closeKeyboard()
-                }
-               
-            
-            
+     
                 
             Spacer()
                 

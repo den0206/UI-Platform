@@ -28,6 +28,9 @@
 		3AAEBA2E25711A3800500142 /* AnalogClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAEBA2D25711A3800500142 /* AnalogClockView.swift */; };
 		3AAEBA302571237F00500142 /* AnalogClockView.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3AAEBA2F2571237F00500142 /* AnalogClockView.txt */; };
 		3ABB640A2572316C002E2AA6 /* Circular_SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABB64092572316C002E2AA6 /* Circular_SliderView.swift */; };
+		3ABE66F525738109006D7F5D /* code-1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3ABE66F3257380D9006D7F5D /* code-1.mp4 */; };
+		3ABE66F625738109006D7F5D /* code-2.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 3ABE66F4257380D9006D7F5D /* code-2.mp4 */; };
+		3ABE66FA25738313006D7F5D /* DairyChartsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABE66F925738313006D7F5D /* DairyChartsView.swift */; };
 		3ACD1DE32571E9A00062B4D9 /* CodeListsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACD1DE22571E9A00062B4D9 /* CodeListsView.swift */; };
 		3AD7D4A8256FC8F2006387B0 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD7D4A7256FC8F2006387B0 /* MainTabView.swift */; };
 		3AD7D4AE256FD62F006387B0 /* PlaneButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD7D4AD256FD62F006387B0 /* PlaneButtonView.swift */; };
@@ -37,6 +40,9 @@
 		3ADABB33256E9AC100C71FE8 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADABB32256E9AC100C71FE8 /* RootView.swift */; };
 		3ADABB35256E9B4000C71FE8 /* ExampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADABB34256E9B4000C71FE8 /* ExampleView.swift */; };
 		3AE37B35256D3C1500AB32C8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE37B34256D3C1500AB32C8 /* HomeView.swift */; };
+		3AE4D41E25738EB8001185B7 /* Dairy_ChartsView.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3AE4D41D25738EB8001185B7 /* Dairy_ChartsView.txt */; };
+		3AE4D4212573904B001185B7 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE4D4202573904B001185B7 /* DashboardView.swift */; };
+		3AE4D423257391F8001185B7 /* DashboardView.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3AE4D422257391F8001185B7 /* DashboardView.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -74,6 +80,9 @@
 		3AAEBA2D25711A3800500142 /* AnalogClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalogClockView.swift; sourceTree = "<group>"; };
 		3AAEBA2F2571237F00500142 /* AnalogClockView.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = AnalogClockView.txt; sourceTree = "<group>"; };
 		3ABB64092572316C002E2AA6 /* Circular_SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Circular_SliderView.swift; sourceTree = "<group>"; };
+		3ABE66F3257380D9006D7F5D /* code-1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "code-1.mp4"; sourceTree = "<group>"; };
+		3ABE66F4257380D9006D7F5D /* code-2.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = "code-2.mp4"; sourceTree = "<group>"; };
+		3ABE66F925738313006D7F5D /* DairyChartsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DairyChartsView.swift; sourceTree = "<group>"; };
 		3ACD1DE22571E9A00062B4D9 /* CodeListsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeListsView.swift; sourceTree = "<group>"; };
 		3AD7D4A7256FC8F2006387B0 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		3AD7D4AD256FD62F006387B0 /* PlaneButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaneButtonView.swift; sourceTree = "<group>"; };
@@ -83,6 +92,9 @@
 		3ADABB32256E9AC100C71FE8 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		3ADABB34256E9B4000C71FE8 /* ExampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleView.swift; sourceTree = "<group>"; };
 		3AE37B34256D3C1500AB32C8 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		3AE4D41D25738EB8001185B7 /* Dairy_ChartsView.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Dairy_ChartsView.txt; sourceTree = "<group>"; };
+		3AE4D4202573904B001185B7 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		3AE4D422257391F8001185B7 /* DashboardView.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = DashboardView.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +150,7 @@
 				3ADABB27256E8BED00C71FE8 /* Model */,
 				3A57E807256D2BB400810209 /* View */,
 				3A57E80A256D2D0600810209 /* CodeSorce */,
+				3ABE66F2257380BA006D7F5D /* Movies */,
 				3A2C5E18256FF03600A5E87D /* Extension */,
 				3A57E7F4256D2B5D00810209 /* ContentView.swift */,
 				3A57E7F6256D2B5E00810209 /* Assets.xcassets */,
@@ -216,6 +229,24 @@
 			path = CircularSlider;
 			sourceTree = "<group>";
 		};
+		3ABE66F2257380BA006D7F5D /* Movies */ = {
+			isa = PBXGroup;
+			children = (
+				3ABE66F3257380D9006D7F5D /* code-1.mp4 */,
+				3ABE66F4257380D9006D7F5D /* code-2.mp4 */,
+			);
+			path = Movies;
+			sourceTree = "<group>";
+		};
+		3ABE66F7257382DD006D7F5D /* DairyCharts */ = {
+			isa = PBXGroup;
+			children = (
+				3ABE66F925738313006D7F5D /* DairyChartsView.swift */,
+				3AE4D41D25738EB8001185B7 /* Dairy_ChartsView.txt */,
+			);
+			path = DairyCharts;
+			sourceTree = "<group>";
+		};
 		3AD7D4AA256FD4B8006387B0 /* SampleViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,6 +254,8 @@
 				3AAAB93C257110C600F58048 /* PlaneButtonView */,
 				3ABB640B2572316E002E2AA6 /* CircularSlider */,
 				3A48FE8B25723A4B0055BA9F /* PieChart */,
+				3ABE66F7257382DD006D7F5D /* DairyCharts */,
+				3AE4D41F25739038001185B7 /* DashBoard */,
 			);
 			path = SampleViews;
 			sourceTree = "<group>";
@@ -234,6 +267,15 @@
 				3ADABB2C256E8F0400C71FE8 /* CodeType.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		3AE4D41F25739038001185B7 /* DashBoard */ = {
+			isa = PBXGroup;
+			children = (
+				3AE4D4202573904B001185B7 /* DashboardView.swift */,
+				3AE4D422257391F8001185B7 /* DashboardView.txt */,
+			);
+			path = DashBoard;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,6 +342,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3ABE66F525738109006D7F5D /* code-1.mp4 in Resources */,
+				3ABE66F625738109006D7F5D /* code-2.mp4 in Resources */,
+				3AE4D423257391F8001185B7 /* DashboardView.txt in Resources */,
+				3AE4D41E25738EB8001185B7 /* Dairy_ChartsView.txt in Resources */,
 				3A2C5E15256FEBB100A5E87D /* PlaneButtonView.swift in Resources */,
 				3A48FE8F25723CA60055BA9F /* PieChartView.txt in Resources */,
 				3A57E7FA256D2B5E00810209 /* Preview Assets.xcassets in Resources */,
@@ -319,6 +365,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3ABB640A2572316C002E2AA6 /* Circular_SliderView.swift in Sources */,
+				3ABE66FA25738313006D7F5D /* DairyChartsView.swift in Sources */,
 				3AAEBA2E25711A3800500142 /* AnalogClockView.swift in Sources */,
 				3ADABB33256E9AC100C71FE8 /* RootView.swift in Sources */,
 				3AD7D4A8256FC8F2006387B0 /* MainTabView.swift in Sources */,
@@ -334,6 +381,7 @@
 				3A57E7F5256D2B5D00810209 /* ContentView.swift in Sources */,
 				3AADB49625736D53005BA1FF /* LoopMovieView.swift in Sources */,
 				3AADB49A25737165005BA1FF /* Extensions.swift in Sources */,
+				3AE4D4212573904B001185B7 /* DashboardView.swift in Sources */,
 				3ADABB2D256E8F0400C71FE8 /* CodeType.swift in Sources */,
 				3ACD1DE32571E9A00062B4D9 /* CodeListsView.swift in Sources */,
 				3AD7D4AE256FD62F006387B0 /* PlaneButtonView.swift in Sources */,
