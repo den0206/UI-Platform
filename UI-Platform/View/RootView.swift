@@ -9,9 +9,17 @@ import SwiftUI
 
 struct RootView: View {
     
+    @EnvironmentObject var model : CodeModel
+    
     var body: some View {
         
-       MainTabView()
+        
+        if model.showBording {
+            OnBoardingView()
+        } else {
+            MainTabView()
+        }
+    
         
     }
 }

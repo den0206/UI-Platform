@@ -26,7 +26,6 @@ struct SourceView: View {
                      fontSize: model.fontSize,
                      showInvisibleCharacters : false,
                      lineWrapping: true)
-                
                 .onLoadSuccess {
                     /// indicator dismiss
                     self.loading = false
@@ -39,6 +38,12 @@ struct SourceView: View {
                     self.loading = false
 
                 }
+                .onTapGesture {
+                    UIApplication.shared.closeKeyboard()
+                }
+               
+            
+            
                 
             Spacer()
                 

@@ -21,6 +21,10 @@
 		3A57E805256D2B9C00810209 /* CodeMirror-SwiftUI in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 3A57E803256D2B9C00810209 /* CodeMirror-SwiftUI */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		3A57E809256D2BC000810209 /* SampleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A57E808256D2BC000810209 /* SampleView.swift */; };
 		3A57E80E256D2D9F00810209 /* Demo.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A57E80D256D2D9F00810209 /* Demo.txt */; };
+		3AADB49325736779005BA1FF /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AADB49225736779005BA1FF /* OnBoardingView.swift */; };
+		3AADB49625736D53005BA1FF /* LoopMovieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AADB49525736D53005BA1FF /* LoopMovieView.swift */; };
+		3AADB49825736E3D005BA1FF /* LoopBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AADB49725736E3D005BA1FF /* LoopBackgroundView.swift */; };
+		3AADB49A25737165005BA1FF /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AADB49925737165005BA1FF /* Extensions.swift */; };
 		3AAEBA2E25711A3800500142 /* AnalogClockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AAEBA2D25711A3800500142 /* AnalogClockView.swift */; };
 		3AAEBA302571237F00500142 /* AnalogClockView.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3AAEBA2F2571237F00500142 /* AnalogClockView.txt */; };
 		3ABB640A2572316C002E2AA6 /* Circular_SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ABB64092572316C002E2AA6 /* Circular_SliderView.swift */; };
@@ -63,6 +67,10 @@
 		3A57E7FB256D2B5E00810209 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A57E808256D2BC000810209 /* SampleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleView.swift; sourceTree = "<group>"; };
 		3A57E80D256D2D9F00810209 /* Demo.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Demo.txt; sourceTree = "<group>"; };
+		3AADB49225736779005BA1FF /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
+		3AADB49525736D53005BA1FF /* LoopMovieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoopMovieView.swift; sourceTree = "<group>"; };
+		3AADB49725736E3D005BA1FF /* LoopBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoopBackgroundView.swift; sourceTree = "<group>"; };
+		3AADB49925737165005BA1FF /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		3AAEBA2D25711A3800500142 /* AnalogClockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalogClockView.swift; sourceTree = "<group>"; };
 		3AAEBA2F2571237F00500142 /* AnalogClockView.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = AnalogClockView.txt; sourceTree = "<group>"; };
 		3ABB64092572316C002E2AA6 /* Circular_SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Circular_SliderView.swift; sourceTree = "<group>"; };
@@ -93,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				3A2C5E19256FF04700A5E87D /* LoadingView.swift */,
+				3AADB49925737165005BA1FF /* Extensions.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -149,6 +158,7 @@
 		3A57E807256D2BB400810209 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3AADB49225736779005BA1FF /* OnBoardingView.swift */,
 				3ADABB32256E9AC100C71FE8 /* RootView.swift */,
 				3AD7D4A7256FC8F2006387B0 /* MainTabView.swift */,
 				3ADABB34256E9B4000C71FE8 /* ExampleView.swift */,
@@ -156,6 +166,7 @@
 				3ADABB30256E922800C71FE8 /* SourceView.swift */,
 				3AE37B34256D3C1500AB32C8 /* HomeView.swift */,
 				3A57E808256D2BC000810209 /* SampleView.swift */,
+				3AADB49425736D29005BA1FF /* ExtensionViews */,
 				3AD7D4AA256FD4B8006387B0 /* SampleViews */,
 			);
 			path = View;
@@ -176,6 +187,15 @@
 				3A2C5E16256FECFA00A5E87D /* PlaneButtonView.txt */,
 			);
 			path = PlaneButtonView;
+			sourceTree = "<group>";
+		};
+		3AADB49425736D29005BA1FF /* ExtensionViews */ = {
+			isa = PBXGroup;
+			children = (
+				3AADB49725736E3D005BA1FF /* LoopBackgroundView.swift */,
+				3AADB49525736D53005BA1FF /* LoopMovieView.swift */,
+			);
+			path = ExtensionViews;
 			sourceTree = "<group>";
 		};
 		3AAEBA2C25711A1400500142 /* AnalogClock */ = {
@@ -302,14 +322,18 @@
 				3AAEBA2E25711A3800500142 /* AnalogClockView.swift in Sources */,
 				3ADABB33256E9AC100C71FE8 /* RootView.swift in Sources */,
 				3AD7D4A8256FC8F2006387B0 /* MainTabView.swift in Sources */,
+				3AADB49825736E3D005BA1FF /* LoopBackgroundView.swift in Sources */,
 				3A57E809256D2BC000810209 /* SampleView.swift in Sources */,
 				3ADABB31256E922800C71FE8 /* SourceView.swift in Sources */,
 				3ADABB2B256E8EAD00C71FE8 /* CodeModel.swift in Sources */,
 				3A2C5E1A256FF04700A5E87D /* LoadingView.swift in Sources */,
 				3A48FE8D25723A650055BA9F /* PieChartView.swift in Sources */,
+				3AADB49325736779005BA1FF /* OnBoardingView.swift in Sources */,
 				3AE37B35256D3C1500AB32C8 /* HomeView.swift in Sources */,
 				3ADABB35256E9B4000C71FE8 /* ExampleView.swift in Sources */,
 				3A57E7F5256D2B5D00810209 /* ContentView.swift in Sources */,
+				3AADB49625736D53005BA1FF /* LoopMovieView.swift in Sources */,
+				3AADB49A25737165005BA1FF /* Extensions.swift in Sources */,
 				3ADABB2D256E8F0400C71FE8 /* CodeType.swift in Sources */,
 				3ACD1DE32571E9A00062B4D9 /* CodeListsView.swift in Sources */,
 				3AD7D4AE256FD62F006387B0 /* PlaneButtonView.swift in Sources */,

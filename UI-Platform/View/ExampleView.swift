@@ -34,8 +34,10 @@ struct ExampleView: View {
 
                     if (value.translation.width > 0) {
                         model.previewPage()
+                       
                     } else {
                         model.nextPage()
+                     
                     }
                 }))
                 
