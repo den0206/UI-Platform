@@ -23,7 +23,7 @@ struct MainTabView: View {
                     ExampleView()
                     
                 case 1 :
-                    CodeListsView()
+                    CodeListsView(isSheet: false)
         
                 case 2 :
                     HomeView()
@@ -54,6 +54,7 @@ struct CircularTab : View {
     var body: some View {
         
         HStack {
+        
             tabButton(function: {index = 0}, systemImageName: "doc.richtext", title: "View", number: 0, index: index)
             
             Spacer(minLength : 15)
@@ -63,6 +64,7 @@ struct CircularTab : View {
             Spacer(minLength: 15)
             
             tabButton(function: {index = 2}, systemImageName: "chevron.left.slash.chevron.right", title: "Source", number: 2, index: index)
+            
          
         }
         .padding(.top,-10)

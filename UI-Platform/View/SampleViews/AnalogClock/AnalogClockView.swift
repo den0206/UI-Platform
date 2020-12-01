@@ -9,7 +9,7 @@ import SwiftUI
 
 struct AnalogClockView: View {
     
-    @State private var isDark = false
+    @State private var isDark = true
     @State private var currentTime = Time(min: 0, sec: 0, hour: 0)
     @State private var receiver = Timer.publish(every: 1, on: .current, in: .default).autoconnect()
     
@@ -87,13 +87,6 @@ struct AnalogClockView: View {
             .frame(width: screenWidth - 80, height: screenWidth - 80)
             
           
-            
-            /// descriptions
-//            Text(Locale.current.localizedString(forRegionCode: Locale.current.regionCode!) ?? "")
-//                .font(.largeTitle)
-//                .fontWeight(.heavy)
-//                .padding(.top,35)
-//
             Text(getTime())
                 .font(.system(size: 45))
                 .fontWeight(.heavy)

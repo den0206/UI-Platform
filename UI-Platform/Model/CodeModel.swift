@@ -11,6 +11,7 @@ import CodeMirror_SwiftUI
 
 final class CodeModel : ObservableObject {
     
+    
     @Published var showBording : Bool = true
     @Published var showTab : Bool = true
     @Published var typeIndex : Int = 0

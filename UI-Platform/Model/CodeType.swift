@@ -10,11 +10,14 @@ import SwiftUI
 
 enum CodeType : CaseIterable, Identifiable{
     
+    case WaveAnimation
     case AnalogClock
+    case LiquidSwipe
     case PieChart
     case Circular_Slider
     case DairyChart
     case DashBoard
+    case VgridSearch
     
     var id : Int {
         hashValue
@@ -23,8 +26,12 @@ enum CodeType : CaseIterable, Identifiable{
     var title : String {
         switch self {
         
+        case .WaveAnimation :
+            return "Wave Animation"
         case .AnalogClock :
             return  "Analog Clock"
+        case .LiquidSwipe:
+            return "LiquidSwipeView"
         case .PieChart:
             return "Pie Chart"
         case .Circular_Slider:
@@ -33,14 +40,32 @@ enum CodeType : CaseIterable, Identifiable{
             return "Dairy Charts"
         case .DashBoard :
             return "Dash Board"
+        case .VgridSearch :
+            return "Vgrid Search"
+        }
+    }
+    
+    var relationUrlString : String {
+        switch self {
+        
+        case .WaveAnimation :
+            return "https://www.youtube.com/watch?v=7bXQqnCFkFw"
+        case .LiquidSwipe :
+            return "https://www.youtube.com/watch?v=BQrrNpgDbEg"
+        default :
+            return "https://www.google.com/"
         }
     }
     
     var sourceName : String {
         switch self {
         
+        case .WaveAnimation :
+            return "WaveAnimationView"
         case .AnalogClock :
             return "AnalogClockView"
+        case .LiquidSwipe:
+            return "LiquidSwipeView"
         case .PieChart :
             return "PieChartView"
         case .Circular_Slider :
@@ -49,6 +74,8 @@ enum CodeType : CaseIterable, Identifiable{
             return "Dairy_ChartsView"
         case . DashBoard :
             return "DashboardView"
+        case .VgridSearch :
+            return "VgridSearchView"
      
         }
     }
@@ -56,8 +83,13 @@ enum CodeType : CaseIterable, Identifiable{
     var rootView : AnyView {
         
         switch self {
+        
+        case .WaveAnimation :
+            return AnyView(WaveAnimationView())
         case .AnalogClock :
             return AnyView(AnalogClockView())
+        case .LiquidSwipe :
+            return AnyView(LiquidSwipeView())
         case .PieChart:
              return AnyView(PieChartView())
         case .Circular_Slider :
@@ -66,6 +98,8 @@ enum CodeType : CaseIterable, Identifiable{
             return AnyView(DairyChartsView())
         case . DashBoard :
             return AnyView(DashBoardView())
+        case . VgridSearch :
+            return AnyView(LazyVgridSearchView())
     
         }
     }

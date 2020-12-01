@@ -9,13 +9,31 @@ import SwiftUI
 
 struct CodeListsView: View {
     
+    @Environment(\.presentationMode) var presentationMode
+    var isSheet : Bool = true
+    
     var body: some View {
 
         
         VStack {
             
-            Spacer().frame( height: 70)
-            
+            if isSheet {
+                HStack {
+                    
+                    Button(action: {presentationMode.wrappedValue.dismiss()}) {
+                        Image(systemName: "xmark")
+                            .font(.system(size: 24))
+                            .foregroundColor(.primary)
+                            .padding()
+                    }
+                  
+                    Spacer()
+                }
+                
+            } else {
+                Spacer().frame(height: 70)
+            }
+          
             ScrollView {
                 ForEach(CodeType.allCases) { type in
                     
@@ -37,6 +55,7 @@ struct CodeListsView: View {
 struct TypeCell : View {
     
     @EnvironmentObject var model : CodeModel
+    @Environment(\.presentationMode) var presentationMode
     
     var type : CodeType
 
@@ -44,7 +63,10 @@ struct TypeCell : View {
     var body: some View {
         
         
-        Button(action: {model.setType(type: type)}) {
+        Button(action: {
+            model.setType(type: type)
+            presentationMode.wrappedValue.dismiss()
+        }) {
             
             VStack {
                 HStack {
