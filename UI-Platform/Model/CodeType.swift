@@ -57,6 +57,13 @@ enum CodeType : CaseIterable, Identifiable{
         }
     }
     
+    var description : String {
+        switch self {
+        
+        default:
+            return "No Description"
+        }
+    }
     var sourceName : String {
         switch self {
         

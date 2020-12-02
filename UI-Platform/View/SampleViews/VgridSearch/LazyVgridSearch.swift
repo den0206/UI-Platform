@@ -53,6 +53,14 @@ struct AppInfoView: View {
             
             WebImage(url: URL(string: item.artworkUrl100))
                 .resizable()
+                .placeholder {
+                    Rectangle()
+                        .fill(Color(white: 0.95))
+                        .overlay(
+                            ProgressView()
+                                .foregroundColor(.black)
+                        )
+                }
                 .scaledToFit()
                 .cornerRadius(22)
             

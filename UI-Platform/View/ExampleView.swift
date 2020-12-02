@@ -90,7 +90,7 @@ struct ExampleView: View {
                     case .list :
                         CodeListsView()
                     case  .description :
-                        WebSampleView()
+                        DescriptionView()
                     }
                 })
                 

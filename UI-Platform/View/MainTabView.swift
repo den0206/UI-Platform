@@ -11,13 +11,11 @@ struct MainTabView: View {
     
     @EnvironmentObject var model : CodeModel
     
-    @State private var index = 0
-    
     var body: some View {
         
         VStack {
             ZStack {
-                switch index {
+                switch model.tabIndex {
                 
                 case 0 :
                     ExampleView()
@@ -35,12 +33,13 @@ struct MainTabView: View {
             }
            
             if model.showTab{
-                CircularTab(index: $index)
+                CircularTab(index: $model.tabIndex)
                     .frame(height: 70)
                     .animation(.spring())
                     
             }
         }
+        .showHUD(isShowing: $model.showHUD)
         .edgesIgnoringSafeArea(.all)
         
         
@@ -120,7 +119,8 @@ struct tabButton : View {
                                 .foregroundColor(.white)
                                 .padding()
                                 .background(Color.gray)
-                                .clipShape(Circle())
+                                .clipShape(RoundedRectangle(cornerRadius: 8))
+                                .offset(y : -5)
                                 
                         } else {
                             Image(imageName!)
@@ -129,8 +129,8 @@ struct tabButton : View {
                                 .foregroundColor(.white)
                                 .frame(width: 30, height: 30)
                                 .padding()
-                                .background(Color.green)
-                                .clipShape(Circle())
+                                .background(Color.gray)
+                                .clipShape(RoundedRectangle(cornerRadius: 8))
                                 .offset(y : -20)
                                 
                         }

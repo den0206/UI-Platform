@@ -15,28 +15,33 @@ struct WebSampleView: View {
 
     
     var body: some View {
-        NavigationView {
-            
+        
+        
+        VStack {
             MyWebView(urlString: model.codeType.relationUrlString)
             
-                .navigationBarTitle(model.codeType.relationUrlString, displayMode: .inline)
-                .navigationBarItems(leading:
-                                        Button(action: {presentationMode.wrappedValue.dismiss()}, label: {
-                                            Image(systemName: "xmark")
-                                                .foregroundColor(.primary)
-                                        })
-                )
-
         }
+        
+        
+        .navigationBarTitle(model.codeType.relationUrlString, displayMode: .inline)
+        .navigationBarItems(leading:
+                                Button(action: {presentationMode.wrappedValue.dismiss()}, label: {
+                                    Image(systemName: "xmark")
+                                        .foregroundColor(.primary)
+                                })
+        )
+    
     }
 }
 
 struct MyWebView : UIViewRepresentable {
     
     let urlString : String
+   
+    
     
     func makeUIView(context: Context) -> WKWebView {
-        
+    
         return WKWebView()
     }
     

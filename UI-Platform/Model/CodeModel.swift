@@ -12,10 +12,12 @@ import CodeMirror_SwiftUI
 final class CodeModel : ObservableObject {
     
     
+    @Published var tabIndex : Int = 0
     @Published var showBording : Bool = true
     @Published var showTab : Bool = true
     @Published var typeIndex : Int = 0
     @Published var codeType : CodeType = CodeType.allCases.first!
+    @Published var showHUD = false
     
     @AppStorage("fontSize") var fontSize : Int = 10
     
@@ -57,8 +59,15 @@ final class CodeModel : ObservableObject {
         
         self.typeIndex = allTypes.firstIndex(of: type)!
         self.codeType = type
+        
+        /// change Tab
+        self.tabIndex = 0
     
     }
     
- 
+    func copyText() {
+        UIPasteboard.general.string = codeType.codeBlock
+        showHUD = true
+    }
+
 }

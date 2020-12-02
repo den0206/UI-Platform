@@ -13,6 +13,7 @@ struct OnBoardingView: View {
 
     @State private var maxWidth = UIScreen.main.bounds.width - 65
     @State private var offset : CGFloat = 0
+    @State private var textOpcity : Double = 0
     let capColor = Color.gray
     
     
@@ -26,6 +27,19 @@ struct OnBoardingView: View {
             
             /// Z2
             VStack {
+                
+                Spacer()
+                
+                Text("Write Your Code")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .foregroundColor(.white)
+                    .opacity(textOpcity)
+                    .onAppear(perform: {
+                        withAnimation(.easeInOut(duration: 2.0)) {
+                            textOpcity = 1.0
+                        }
+                    })
                 
                 Spacer()
                 
@@ -71,6 +85,7 @@ struct OnBoardingView: View {
                 
             }
             .padding()
+       
             
         }
     }

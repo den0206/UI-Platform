@@ -16,7 +16,7 @@ struct HomeView: View {
     @State private var showSideMenu = false
     @State private var fullScreen = false
     @State private var selectedIndex : Int = 0
-
+    
     var width = UIScreen.main.bounds.width
 
 
@@ -37,7 +37,15 @@ struct HomeView: View {
                                 .foregroundColor(.primary)
                          }
                         
-                         Spacer()
+                        Spacer()
+                        
+                        Button(action: {model.copyText()}) {
+                            Image(systemName: "paperclip")
+                                .font(.system(size: 24))
+                                .foregroundColor(.primary)
+                        }
+                        .padding(.trailing,4)
+                      
 
                          Button(action: {
                              withAnimation(.spring()) {
