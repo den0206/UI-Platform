@@ -22,7 +22,7 @@ struct WaveAnimationView: View {
             WaveView()
             
         }
-        
+        .preferredColorScheme(.dark)
     }
 }
 

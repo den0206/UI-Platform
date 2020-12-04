@@ -32,7 +32,6 @@ struct ExampleView: View {
             
             model.codeType.rootView
                 .offset(x: viewX)
-                .preferredColorScheme(.dark)
                 .navigationBarItems(leading:
                   HStack(spacing :4) {
                       

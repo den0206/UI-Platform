@@ -11,7 +11,12 @@ import SwiftUI
 enum CodeType : CaseIterable, Identifiable{
     
     case WaveAnimation
+    case RippleAnimation
+    case CubeRotation
+    case ColorPicker
     case AnalogClock
+    case CardType
+    case ScrollEffect3D
     case LiquidSwipe
     case PieChart
     case Circular_Slider
@@ -28,8 +33,18 @@ enum CodeType : CaseIterable, Identifiable{
         
         case .WaveAnimation :
             return "Wave Animation"
+        case .RippleAnimation :
+            return "Ripple Animation"
+        case .CubeRotation :
+            return "Cube Rotaion"
+        case .ColorPicker :
+            return "Color picker"
         case .AnalogClock :
             return  "Analog Clock"
+        case .CardType :
+            return "CardType"
+        case .ScrollEffect3D :
+            return "3DScrollEffect"
         case .LiquidSwipe:
             return "LiquidSwipeView"
         case .PieChart:
@@ -50,6 +65,16 @@ enum CodeType : CaseIterable, Identifiable{
         
         case .WaveAnimation :
             return "https://www.youtube.com/watch?v=7bXQqnCFkFw"
+        case .RippleAnimation :
+            return "https://www.youtube.com/embed/A68abUry2-Q"
+        case.CubeRotation :
+            return "https://trailingclosure.com/cube-rotation-transition/"
+        case .ColorPicker :
+            return "https://www.youtube.com/embed/tljAOx7tbKI"
+        case .CardType :
+            return "https://www.youtube.com/embed/gHWmlxQueR4"
+        case .ScrollEffect3D :
+            return "https://trailingclosure.com/3d-scroll-effect/"
         case .LiquidSwipe :
             return "https://www.youtube.com/watch?v=BQrrNpgDbEg"
         default :
@@ -69,8 +94,18 @@ enum CodeType : CaseIterable, Identifiable{
         
         case .WaveAnimation :
             return "WaveAnimationView"
+        case .RippleAnimation :
+            return "RippleAnimationView"
+        case .CubeRotation :
+            return "CubeRotationView"
+        case .ColorPicker :
+            return "ColorPickerView"
         case .AnalogClock :
             return "AnalogClockView"
+        case .CardType :
+            return "CardTypeView"
+        case .ScrollEffect3D :
+            return "ScrollEffect3DView"
         case .LiquidSwipe:
             return "LiquidSwipeView"
         case .PieChart :
@@ -93,8 +128,18 @@ enum CodeType : CaseIterable, Identifiable{
         
         case .WaveAnimation :
             return AnyView(WaveAnimationView())
+        case .RippleAnimation :
+            return AnyView(RippleAnimationView())
+        case .CubeRotation :
+            return AnyView(CubeRotationView())
+        case .ColorPicker :
+            return AnyView(ColorPickerView())
         case .AnalogClock :
             return AnyView(AnalogClockView())
+        case .CardType :
+            return AnyView(CardTypeView())
+        case .ScrollEffect3D :
+            return AnyView(ScrollEffect3DView())
         case .LiquidSwipe :
             return AnyView(LiquidSwipeView())
         case .PieChart:
