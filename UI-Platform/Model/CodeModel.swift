@@ -16,7 +16,7 @@ final class CodeModel : ObservableObject {
     @Published var showBording : Bool = true
     @Published var showTab : Bool = true
     @Published var typeIndex : Int = 0
-    @Published var codeType : CodeType = CodeType.allCases.first!
+    @Published var codeType : CodeType = CodeType.allCases.first ?? .WaveAnimation
     @Published var showHUD = false
     
     @AppStorage("fontSize") var fontSize : Int = 10
@@ -34,6 +34,9 @@ final class CodeModel : ObservableObject {
     
     private var allTypes = CodeType.allCases
     
+    var interstitalView = InterstitalView()
+    
+    //MARK: - functions
     
     func nextPage() {
         
@@ -42,7 +45,15 @@ final class CodeModel : ObservableObject {
         if typeIndex < allTypes.count - 1{
             typeIndex += 1
             self.codeType = allTypes[typeIndex]
+            
+            if typeIndex % 3 == 0 {
+                /// ad
+                interstitalView.showAd()
+
+            }
         }
+        
+        
     }
     
     func previewPage() {
@@ -51,6 +62,14 @@ final class CodeModel : ObservableObject {
         
         typeIndex -= 1
         self.codeType = allTypes[typeIndex]
+        
+        if typeIndex % 3 == 0 {
+            /// ad
+            interstitalView.showAd()
+
+        }
+        
+      
         
 
     }
@@ -62,6 +81,12 @@ final class CodeModel : ObservableObject {
         
         /// change Tab
         self.tabIndex = 0
+        
+        if typeIndex % 3 == 0 {
+            /// ad
+            interstitalView.showAd()
+
+        }
     
     }
     

@@ -33,6 +33,10 @@ struct CodeListsView: View {
             } else {
                 Spacer().frame(height: 70)
             }
+            
+            AdBannerView()
+                .frame(width: 320, height: 50, alignment: .center)
+                .padding(.bottom,5)
           
             ScrollView {
                 ForEach(CodeType.allCases) { type in

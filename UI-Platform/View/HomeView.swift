@@ -145,6 +145,7 @@ struct HomeView: View {
              }
              .gesture(DragGesture().onEnded(leftRightValue(value:)))
              .ignoresSafeArea(.all, edges: .all)
+             
             
         } else {
             
@@ -183,9 +184,7 @@ struct HomeView: View {
         }
        
     }
-    
 
-    
     func selectedButton(type : CodeType) {
         /// selef.type = type
 

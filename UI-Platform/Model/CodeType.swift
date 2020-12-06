@@ -12,8 +12,10 @@ enum CodeType : CaseIterable, Identifiable{
     
     case WaveAnimation
     case RippleAnimation
+    case Isometric
     case CubeRotation
     case ColorPicker
+    case StarRating
     case AnalogClock
     case CardType
     case ScrollEffect3D
@@ -35,10 +37,15 @@ enum CodeType : CaseIterable, Identifiable{
             return "Wave Animation"
         case .RippleAnimation :
             return "Ripple Animation"
+        case .Isometric :
+            return "Isometric View"
         case .CubeRotation :
             return "Cube Rotaion"
+   
         case .ColorPicker :
             return "Color picker"
+        case .StarRating :
+            return "Star Rating"
         case .AnalogClock :
             return  "Analog Clock"
         case .CardType :
@@ -67,10 +74,14 @@ enum CodeType : CaseIterable, Identifiable{
             return "https://www.youtube.com/watch?v=7bXQqnCFkFw"
         case .RippleAnimation :
             return "https://www.youtube.com/embed/A68abUry2-Q"
+        case .Isometric :
+            return "https://trailingclosure.com/isometric-viewmodifier/"
         case.CubeRotation :
             return "https://trailingclosure.com/cube-rotation-transition/"
         case .ColorPicker :
             return "https://www.youtube.com/embed/tljAOx7tbKI"
+        case .StarRating :
+            return "https://trailingclosure.com/popup-review-button-using-swiftui/"
         case .CardType :
             return "https://www.youtube.com/embed/gHWmlxQueR4"
         case .ScrollEffect3D :
@@ -96,10 +107,14 @@ enum CodeType : CaseIterable, Identifiable{
             return "WaveAnimationView"
         case .RippleAnimation :
             return "RippleAnimationView"
+        case .Isometric :
+            return "IsometricView"
         case .CubeRotation :
             return "CubeRotationView"
         case .ColorPicker :
             return "ColorPickerView"
+        case .StarRating :
+            return "StarRatingView"
         case .AnalogClock :
             return "AnalogClockView"
         case .CardType :
@@ -130,10 +145,14 @@ enum CodeType : CaseIterable, Identifiable{
             return AnyView(WaveAnimationView())
         case .RippleAnimation :
             return AnyView(RippleAnimationView())
+        case .Isometric :
+            return AnyView(ExampleIsometricView())
         case .CubeRotation :
             return AnyView(CubeRotationView())
         case .ColorPicker :
             return AnyView(ColorPickerView())
+        case .StarRating :
+            return AnyView(StarRatingView())
         case .AnalogClock :
             return AnyView(AnalogClockView())
         case .CardType :

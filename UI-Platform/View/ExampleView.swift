@@ -30,8 +30,40 @@ struct ExampleView: View {
         
         NavigationView {
             
-            model.codeType.rootView
-                .offset(x: viewX)
+            
+                model.codeType.rootView
+                    .offset(x: viewX)
+                    .gesture(DragGesture()
+                           .onChanged({ (value) in
+                               
+                               viewX = value.translation.width
+                           })
+                           .onEnded({ (value) in
+                               
+                               if (abs(value.translation.width) < 10) {return}
+                               
+                               if (value.translation.width > 0) {
+                                   model.previewPage()
+                                   
+                               } else {
+                                   model.nextPage()
+                                   
+                               }
+                               
+                               viewX = 0
+                           }))
+                    .sheet(item: $sheetView, content: { (item) in
+                        
+                        switch item {
+                        
+                        case .list :
+                            CodeListsView()
+                        case  .description :
+                            DescriptionView()
+                        }
+                    })
+             
+          
                 .navigationBarItems(leading:
                   HStack(spacing :4) {
                       
@@ -63,35 +95,6 @@ struct ExampleView: View {
                     }
                      
                 )
-                .gesture(DragGesture()
-                       .onChanged({ (value) in
-                           
-                           viewX = value.translation.width
-                       })
-                       .onEnded({ (value) in
-                           
-                           if (abs(value.translation.width) < 10) {return}
-                           
-                           if (value.translation.width > 0) {
-                               model.previewPage()
-                               
-                           } else {
-                               model.nextPage()
-                               
-                           }
-                           
-                           viewX = 0
-                       }))
-                .sheet(item: $sheetView, content: { (item) in
-                    
-                    switch item {
-                    
-                    case .list :
-                        CodeListsView()
-                    case  .description :
-                        DescriptionView()
-                    }
-                })
                 
                 
                 .navigationTitle(model.codeType.title)

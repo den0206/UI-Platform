@@ -28,6 +28,7 @@ struct OnBoardingView: View {
             /// Z2
             VStack {
                 
+           
                 Spacer()
                 
                 Text("Write Your Code")
@@ -81,6 +82,10 @@ struct OnBoardingView: View {
                     }
                 }
                 .frame(width: maxWidth, height: 65)
+                
+                AdBannerView()
+                    .frame(width: 320, height: 50, alignment: .center)
+                    .padding(.bottom, 5)
         
                 
             }
