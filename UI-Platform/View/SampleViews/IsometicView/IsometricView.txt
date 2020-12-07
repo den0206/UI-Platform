@@ -1,12 +1,5 @@
-//
-//  IsometricView.swift
-//  UI-Platform
-//
-//  Created by 酒井ゆうき on 2020/12/06.
-//
 
 import SwiftUI
-
 
 struct ExampleIsometricView : View  {
     

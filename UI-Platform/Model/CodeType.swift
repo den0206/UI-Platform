@@ -11,6 +11,7 @@ import SwiftUI
 enum CodeType : CaseIterable, Identifiable{
     
     case WaveAnimation
+    case TemperatureControl
     case RippleAnimation
     case Isometric
     case CubeRotation
@@ -35,13 +36,14 @@ enum CodeType : CaseIterable, Identifiable{
         
         case .WaveAnimation :
             return "Wave Animation"
+        case .TemperatureControl :
+            return "Temperature Control"
         case .RippleAnimation :
             return "Ripple Animation"
         case .Isometric :
             return "Isometric View"
         case .CubeRotation :
             return "Cube Rotaion"
-   
         case .ColorPicker :
             return "Color picker"
         case .StarRating :
@@ -72,6 +74,8 @@ enum CodeType : CaseIterable, Identifiable{
         
         case .WaveAnimation :
             return "https://www.youtube.com/watch?v=7bXQqnCFkFw"
+        case .TemperatureControl :
+            return "https://www.youtube.com/embed/yiQjoFTXR8o"
         case .RippleAnimation :
             return "https://www.youtube.com/embed/A68abUry2-Q"
         case .Isometric :
@@ -105,6 +109,8 @@ enum CodeType : CaseIterable, Identifiable{
         
         case .WaveAnimation :
             return "WaveAnimationView"
+        case .TemperatureControl :
+            return "TemperatureControlView"
         case .RippleAnimation :
             return "RippleAnimationView"
         case .Isometric :
@@ -143,6 +149,8 @@ enum CodeType : CaseIterable, Identifiable{
         
         case .WaveAnimation :
             return AnyView(WaveAnimationView())
+        case .TemperatureControl :
+            return AnyView(TemperatureControlView())
         case .RippleAnimation :
             return AnyView(RippleAnimationView())
         case .Isometric :

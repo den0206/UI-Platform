@@ -15,6 +15,7 @@ struct OnBoardingView: View {
     @State private var offset : CGFloat = 0
     @State private var textOpcity : Double = 0
     let capColor = Color.gray
+    let ranColor = Color.random
     
     
     var body: some View {
@@ -31,16 +32,28 @@ struct OnBoardingView: View {
            
                 Spacer()
                 
-                Text("Write Your Code")
-                    .font(.title)
-                    .fontWeight(.bold)
-                    .foregroundColor(.white)
-                    .opacity(textOpcity)
-                    .onAppear(perform: {
-                        withAnimation(.easeInOut(duration: 2.0)) {
-                            textOpcity = 1.0
-                        }
-                    })
+                IsometricView(active: true, extruded: true, depth: 30) {
+                    Rectangle().fill(LinearGradient(gradient: .init(colors: [ranColor, Color.primary]), startPoint: .topLeading, endPoint: .bottomTrailing))
+                        .frame(width: 200, height: 200)
+                        .overlay(
+                            
+                            Text("Write Your Code")
+                                .font(.title)
+                                .fontWeight(.bold)
+                                .foregroundColor(.white)
+                                .shadow(color: Color.black.opacity(0.6), radius: 3, x: 15, y: 20)
+                                .opacity(textOpcity)
+                                .onAppear(perform: {
+                                    withAnimation(.easeInOut(duration: 2.0)) {
+                                        textOpcity = 1.0
+                                    }
+                                })
+                            
+                        )
+                       
+                }
+               
+             
                 
                 Spacer()
                 
@@ -52,6 +65,7 @@ struct OnBoardingView: View {
                         .fontWeight(.semibold)
                         .foregroundColor(.white)
                         .padding(.leading, 30)
+                    
                     
                     HStack {
                         

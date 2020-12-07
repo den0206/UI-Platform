@@ -23,6 +23,7 @@ struct CubeRotationView: View {
             }
         }
         .frame(width: 200, height: 200, alignment: .center)
+        .shadow(color: Color.white, radius: 10, x: 0, y: 0)
         .onReceive(timer) { (_) in
             withAnimation(Animation.easeOut(duration: 1)) {
                 index = (index + 1) % colors.count

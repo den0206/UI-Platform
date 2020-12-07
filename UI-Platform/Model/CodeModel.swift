@@ -34,6 +34,7 @@ final class CodeModel : ObservableObject {
     
     private var allTypes = CodeType.allCases
     
+    let adInterval = 5
     var interstitalView = InterstitalView()
     
     //MARK: - functions
@@ -46,7 +47,7 @@ final class CodeModel : ObservableObject {
             typeIndex += 1
             self.codeType = allTypes[typeIndex]
             
-            if typeIndex % 3 == 0 {
+            if typeIndex % adInterval == 0 {
                 /// ad
                 interstitalView.showAd()
 
@@ -63,7 +64,7 @@ final class CodeModel : ObservableObject {
         typeIndex -= 1
         self.codeType = allTypes[typeIndex]
         
-        if typeIndex % 3 == 0 {
+        if typeIndex % adInterval == 0 {
             /// ad
             interstitalView.showAd()
 

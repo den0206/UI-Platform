@@ -208,10 +208,3 @@ fileprivate var week_Fit_Data = [
     Fitness(id: 5, title: "Cycling", image: "cycle", data: "100.3 km", suggest: "Weekly Goal \n 125 km"),
 ]
 
-extension Color {
-    
-    static var random : Color{
-        return Color(red: .random(in: 0...1), green: .random(in: 0...1), blue: .random(in: 0...1))
-    }
-}
-

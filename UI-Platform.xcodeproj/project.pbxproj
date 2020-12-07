@@ -63,6 +63,9 @@
 		3AE4D423257391F8001185B7 /* DashboardView.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3AE4D422257391F8001185B7 /* DashboardView.txt */; };
 		3AF406372577CB2A00340555 /* RippleAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF406362577CB2A00340555 /* RippleAnimationView.swift */; };
 		3AF4063A2577CF5E00340555 /* RippleAnimationView.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3AF406392577CF5E00340555 /* RippleAnimationView.txt */; };
+		3AFC2567257E5565008A186C /* TemperatureControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFC2566257E5565008A186C /* TemperatureControlView.swift */; };
+		3AFC2569257E55AA008A186C /* IsometricView.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3AFC2568257E55AA008A186C /* IsometricView.txt */; };
+		3AFC256B257E62DE008A186C /* TemperatureControlView.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3AFC256A257E62DE008A186C /* TemperatureControlView.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -136,6 +139,9 @@
 		3AE4D422257391F8001185B7 /* DashboardView.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = DashboardView.txt; sourceTree = "<group>"; };
 		3AF406362577CB2A00340555 /* RippleAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RippleAnimationView.swift; sourceTree = "<group>"; };
 		3AF406392577CF5E00340555 /* RippleAnimationView.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = RippleAnimationView.txt; sourceTree = "<group>"; };
+		3AFC2566257E5565008A186C /* TemperatureControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureControlView.swift; sourceTree = "<group>"; };
+		3AFC2568257E55AA008A186C /* IsometricView.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = IsometricView.txt; sourceTree = "<group>"; };
+		3AFC256A257E62DE008A186C /* TemperatureControlView.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = TemperatureControlView.txt; sourceTree = "<group>"; };
 		83474828DF4B1847BBB4430F /* Pods-UI-Platform.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UI-Platform.release.xcconfig"; path = "Target Support Files/Pods-UI-Platform/Pods-UI-Platform.release.xcconfig"; sourceTree = "<group>"; };
 		EA3D33AA55F40A8132802682 /* Pods_UI_Platform.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_UI_Platform.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -309,6 +315,7 @@
 			isa = PBXGroup;
 			children = (
 				3AB331B0257C8700003409CE /* IsometricView.swift */,
+				3AFC2568257E55AA008A186C /* IsometricView.txt */,
 			);
 			path = IsometicView;
 			sourceTree = "<group>";
@@ -353,6 +360,7 @@
 			isa = PBXGroup;
 			children = (
 				3ACCB4D72575415C000EFB99 /* WaveAnimation */,
+				3AFC2565257E554E008A186C /* TemperatureControl */,
 				3AF406352577CB0900340555 /* RippleAnimation */,
 				3A230122257A4A4600D3FE60 /* CubeRotation */,
 				3AB331AF257C86EB003409CE /* IsometicView */,
@@ -414,6 +422,15 @@
 				3AF406392577CF5E00340555 /* RippleAnimationView.txt */,
 			);
 			path = RippleAnimation;
+			sourceTree = "<group>";
+		};
+		3AFC2565257E554E008A186C /* TemperatureControl */ = {
+			isa = PBXGroup;
+			children = (
+				3AFC2566257E5565008A186C /* TemperatureControlView.swift */,
+				3AFC256A257E62DE008A186C /* TemperatureControlView.txt */,
+			);
+			path = TemperatureControl;
 			sourceTree = "<group>";
 		};
 		6935AEBB5BBD90E49E36FFB7 /* Frameworks */ = {
@@ -503,7 +520,9 @@
 				3AE49DDC25791AB200DE5655 /* ColorPickerView.txt in Resources */,
 				3ABE66F625738109006D7F5D /* code-2.mp4 in Resources */,
 				3AE4D423257391F8001185B7 /* DashboardView.txt in Resources */,
+				3AFC256B257E62DE008A186C /* TemperatureControlView.txt in Resources */,
 				3AE4D41E25738EB8001185B7 /* Dairy_ChartsView.txt in Resources */,
+				3AFC2569257E55AA008A186C /* IsometricView.txt in Resources */,
 				3A230126257A4F7300D3FE60 /* CubeRotationView.txt in Resources */,
 				3ACCB4DB25754338000EFB99 /* WaveAnimationView.txt in Resources */,
 				3A48FE8F25723CA60055BA9F /* PieChartView.txt in Resources */,
@@ -596,6 +615,7 @@
 				3AE37B35256D3C1500AB32C8 /* HomeView.swift in Sources */,
 				3ADABB35256E9B4000C71FE8 /* ExampleView.swift in Sources */,
 				3A57E7F5256D2B5D00810209 /* ContentView.swift in Sources */,
+				3AFC2567257E5565008A186C /* TemperatureControlView.swift in Sources */,
 				3A230129257A50F000D3FE60 /* ScrollEffect3DView.swift in Sources */,
 				3AADB49625736D53005BA1FF /* LoopMovieView.swift in Sources */,
 				3AADB49A25737165005BA1FF /* Extensions.swift in Sources */,

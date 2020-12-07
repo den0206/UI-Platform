@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 import UIKit
 
 extension UIApplication {
@@ -13,3 +14,11 @@ extension UIApplication {
         sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
 }
+
+extension Color {
+    
+    static var random : Color{
+        return Color(red: .random(in: 0...1), green: .random(in: 0...1), blue: .random(in: 0...1))
+    }
+}
+
