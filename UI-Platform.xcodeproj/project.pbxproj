@@ -11,9 +11,13 @@
 		3A230124257A4A6800D3FE60 /* CubeRotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A230123257A4A6800D3FE60 /* CubeRotationView.swift */; };
 		3A230126257A4F7300D3FE60 /* CubeRotationView.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A230125257A4F7300D3FE60 /* CubeRotationView.txt */; };
 		3A230129257A50F000D3FE60 /* ScrollEffect3DView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A230128257A50F000D3FE60 /* ScrollEffect3DView.swift */; };
+		3A273349257FB54500236BF7 /* JoyStickView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A273348257FB54500236BF7 /* JoyStickView.swift */; };
+		3A27334B257FC47900236BF7 /* JoyStickView.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A27334A257FC47900236BF7 /* JoyStickView.txt */; };
 		3A278A7325739AA7007EC881 /* LazyVgridSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A278A7225739AA7007EC881 /* LazyVgridSearch.swift */; };
 		3A278A7525739BB9007EC881 /* VgridSearchView.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A278A7425739BB9007EC881 /* VgridSearchView.txt */; };
 		3A2C5E1A256FF04700A5E87D /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A2C5E19256FF04700A5E87D /* LoadingView.swift */; };
+		3A35114F2580A5DB00FB3C94 /* StarAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A35114E2580A5DB00FB3C94 /* StarAnimationView.swift */; };
+		3A3511512580B32300FB3C94 /* StarAnimationView.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A3511502580B32300FB3C94 /* StarAnimationView.txt */; };
 		3A3641D2257B31540079426F /* AdMob.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A3641D1257B31540079426F /* AdMob.swift */; };
 		3A48FE8A257236010055BA9F /* Circular_SliderView.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A48FE89257236010055BA9F /* Circular_SliderView.txt */; };
 		3A48FE8D25723A650055BA9F /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A48FE8C25723A650055BA9F /* PieChartView.swift */; };
@@ -87,9 +91,13 @@
 		3A230123257A4A6800D3FE60 /* CubeRotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CubeRotationView.swift; sourceTree = "<group>"; };
 		3A230125257A4F7300D3FE60 /* CubeRotationView.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = CubeRotationView.txt; sourceTree = "<group>"; };
 		3A230128257A50F000D3FE60 /* ScrollEffect3DView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollEffect3DView.swift; sourceTree = "<group>"; };
+		3A273348257FB54500236BF7 /* JoyStickView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoyStickView.swift; sourceTree = "<group>"; };
+		3A27334A257FC47900236BF7 /* JoyStickView.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = JoyStickView.txt; sourceTree = "<group>"; };
 		3A278A7225739AA7007EC881 /* LazyVgridSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LazyVgridSearch.swift; sourceTree = "<group>"; };
 		3A278A7425739BB9007EC881 /* VgridSearchView.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = VgridSearchView.txt; sourceTree = "<group>"; };
 		3A2C5E19256FF04700A5E87D /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		3A35114E2580A5DB00FB3C94 /* StarAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarAnimationView.swift; sourceTree = "<group>"; };
+		3A3511502580B32300FB3C94 /* StarAnimationView.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = StarAnimationView.txt; sourceTree = "<group>"; };
 		3A3641D1257B31540079426F /* AdMob.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdMob.swift; sourceTree = "<group>"; };
 		3A48FE89257236010055BA9F /* Circular_SliderView.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Circular_SliderView.txt; sourceTree = "<group>"; };
 		3A48FE8C25723A650055BA9F /* PieChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
@@ -177,6 +185,15 @@
 			path = 3DScrollEffect;
 			sourceTree = "<group>";
 		};
+		3A273347257FB53000236BF7 /* Joystick */ = {
+			isa = PBXGroup;
+			children = (
+				3A273348257FB54500236BF7 /* JoyStickView.swift */,
+				3A27334A257FC47900236BF7 /* JoyStickView.txt */,
+			);
+			path = Joystick;
+			sourceTree = "<group>";
+		};
 		3A278A7125739A8C007EC881 /* VgridSearch */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,6 +212,15 @@
 				3A6E921B257B36F500650F21 /* secKey.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		3A35114D2580A5C300FB3C94 /* StarAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				3A35114E2580A5DB00FB3C94 /* StarAnimationView.swift */,
+				3A3511502580B32300FB3C94 /* StarAnimationView.txt */,
+			);
+			path = StarAnimation;
 			sourceTree = "<group>";
 		};
 		3A48FE8B25723A4B0055BA9F /* PieChart */ = {
@@ -359,6 +385,8 @@
 		3AD7D4AA256FD4B8006387B0 /* SampleViews */ = {
 			isa = PBXGroup;
 			children = (
+				3A273347257FB53000236BF7 /* Joystick */,
+				3A35114D2580A5C300FB3C94 /* StarAnimation */,
 				3ACCB4D72575415C000EFB99 /* WaveAnimation */,
 				3AFC2565257E554E008A186C /* TemperatureControl */,
 				3AF406352577CB0900340555 /* RippleAnimation */,
@@ -521,6 +549,8 @@
 				3ABE66F625738109006D7F5D /* code-2.mp4 in Resources */,
 				3AE4D423257391F8001185B7 /* DashboardView.txt in Resources */,
 				3AFC256B257E62DE008A186C /* TemperatureControlView.txt in Resources */,
+				3A3511512580B32300FB3C94 /* StarAnimationView.txt in Resources */,
+				3A27334B257FC47900236BF7 /* JoyStickView.txt in Resources */,
 				3AE4D41E25738EB8001185B7 /* Dairy_ChartsView.txt in Resources */,
 				3AFC2569257E55AA008A186C /* IsometricView.txt in Resources */,
 				3A230126257A4F7300D3FE60 /* CubeRotationView.txt in Resources */,
@@ -597,6 +627,7 @@
 				3A9FFBCA25768C8F006D7886 /* LiquidSwipeView.swift in Sources */,
 				3AD7D4A8256FC8F2006387B0 /* MainTabView.swift in Sources */,
 				3AADB49825736E3D005BA1FF /* LoopBackgroundView.swift in Sources */,
+				3A273349257FB54500236BF7 /* JoyStickView.swift in Sources */,
 				3A3641D2257B31540079426F /* AdMob.swift in Sources */,
 				3ADABB31256E922800C71FE8 /* SourceView.swift in Sources */,
 				3ADABB2B256E8EAD00C71FE8 /* CodeModel.swift in Sources */,
@@ -619,6 +650,7 @@
 				3A230129257A50F000D3FE60 /* ScrollEffect3DView.swift in Sources */,
 				3AADB49625736D53005BA1FF /* LoopMovieView.swift in Sources */,
 				3AADB49A25737165005BA1FF /* Extensions.swift in Sources */,
+				3A35114F2580A5DB00FB3C94 /* StarAnimationView.swift in Sources */,
 				3AE4D4212573904B001185B7 /* DashboardView.swift in Sources */,
 				3ADABB2D256E8F0400C71FE8 /* CodeType.swift in Sources */,
 				3ACD1DE32571E9A00062B4D9 /* CodeListsView.swift in Sources */,

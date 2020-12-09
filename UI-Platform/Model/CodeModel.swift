@@ -16,7 +16,7 @@ final class CodeModel : ObservableObject {
     @Published var showBording : Bool = true
     @Published var showTab : Bool = true
     @Published var typeIndex : Int = 0
-    @Published var codeType : CodeType = CodeType.allCases.first ?? .WaveAnimation
+    @Published var codeType : CodeType = CodeType.allCases.first ?? .JoyStick
     @Published var showHUD = false
     
     @AppStorage("fontSize") var fontSize : Int = 10

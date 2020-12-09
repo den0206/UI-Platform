@@ -50,8 +50,49 @@ struct PieceofPie : Shape {
 }
 
 struct PieChartView: View {
+    
+    @State private var angle = 0.0
     var body: some View {
-        pieChart()
+        
+        VStack {
+            
+            Spacer()
+            
+            ZStack {
+                pieChart()
+                    .rotationEffect(.degrees(self.angle))
+                    .animation(.timingCurve(0, 0.8, 0.2, 1,duration : 10))
+                
+                Circle()
+                    .fill(Color.white)
+                    .frame(height: 50)
+                    .shadow(radius: 5)
+                
+                Image(systemName: "arrowtriangle.up.fill")
+                    .font(.system(size: 30))
+                    .foregroundColor(.white)
+                    .padding(.bottom,40)
+            }
+            
+            Button(action: {
+                self.angle += Double.random(in: 3600..<3960)
+            }) {
+                Text("回転する")
+                    .font(.system(size: 24))
+                    .foregroundColor(.gray)
+            }
+            .padding()
+            
+            Text("\(angle)")
+                .foregroundColor(.gray)
+
+          
+            
+            Spacer()
+            
+            
+        }
+       
             
     }
 }
@@ -95,7 +136,7 @@ struct pieChart : View {
             }
         }
         .rotationEffect(.init(degrees: -45))
-        .frame(width: 300, height: 3000)
+        .frame(width: 300, height: 300)
     }
     
     private func getLabelCoodinate(in geoSize : CGSize, for degree : Double) -> CGPoint {

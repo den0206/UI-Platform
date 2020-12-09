@@ -10,6 +10,8 @@ import SwiftUI
 
 enum CodeType : CaseIterable, Identifiable{
     
+    case JoyStick
+    case StarAnimation
     case WaveAnimation
     case TemperatureControl
     case RippleAnimation
@@ -34,6 +36,11 @@ enum CodeType : CaseIterable, Identifiable{
     var title : String {
         switch self {
         
+        
+        case .JoyStick :
+            return "JoyStick"
+        case .StarAnimation :
+            return "Star Animation"
         case .WaveAnimation :
             return "Wave Animation"
         case .TemperatureControl :
@@ -72,6 +79,10 @@ enum CodeType : CaseIterable, Identifiable{
     var relationUrlString : String {
         switch self {
         
+        case .JoyStick :
+            return "https://www.youtube.com/watch?v=tJKAKnyy_68"
+        case .StarAnimation :
+            return "https://www.appcoda.com/star-wars-animated-text-swiftui/"
         case .WaveAnimation :
             return "https://www.youtube.com/watch?v=7bXQqnCFkFw"
         case .TemperatureControl :
@@ -107,6 +118,11 @@ enum CodeType : CaseIterable, Identifiable{
     var sourceName : String {
         switch self {
         
+        
+        case .JoyStick :
+            return "JoyStickView"
+        case .StarAnimation :
+            return "StarAnimationView"
         case .WaveAnimation :
             return "WaveAnimationView"
         case .TemperatureControl :
@@ -147,6 +163,10 @@ enum CodeType : CaseIterable, Identifiable{
         
         switch self {
         
+        case .JoyStick :
+            return AnyView(JoyStickView())
+        case .StarAnimation :
+            return AnyView(StarAnimationView())
         case .WaveAnimation :
             return AnyView(WaveAnimationView())
         case .TemperatureControl :

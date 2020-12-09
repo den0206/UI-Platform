@@ -82,7 +82,11 @@ struct ExampleView: View {
                   },trailing:
                     
                     HStack(spacing :4) {
-                        Button(action: {self.sheetView = .description}) {
+                        Button(action: {
+//                                self.sheetView = .description
+                            model.tabIndex = 2
+                            
+                        }) {
                               Image(systemName: "text.bubble")
                                   .foregroundColor(.primary)
                           }
