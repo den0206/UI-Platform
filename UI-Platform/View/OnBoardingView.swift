@@ -10,14 +10,8 @@ import SwiftUI
 struct OnBoardingView: View {
     
     @EnvironmentObject var model : CodeModel
-
-    @State private var maxWidth = UIScreen.main.bounds.width - 65
-    @State private var offset : CGFloat = 0
     
-    @State private var textOpcity : Double = 0
-    let capColor = Color.gray
-    let ranColor = Color.random
-    
+    @StateObject var vm = OnBordingViewModel()
     
     var body: some View {
        
@@ -34,7 +28,7 @@ struct OnBoardingView: View {
                 Spacer()
                 
                 IsometricView(active: true, extruded: true, depth: 30) {
-                    Rectangle().fill(LinearGradient(gradient: .init(colors: [ranColor, Color.primary]), startPoint: .topLeading, endPoint: .bottomTrailing))
+                    Rectangle().fill(LinearGradient(gradient: .init(colors: [vm.ranColor, Color.primary]), startPoint: .topLeading, endPoint: .bottomTrailing))
                         .frame(width: 200, height: 200)
                         .overlay(
                             
@@ -43,10 +37,10 @@ struct OnBoardingView: View {
                                 .fontWeight(.bold)
                                 .foregroundColor(.white)
                                 .shadow(color: Color.black.opacity(0.6), radius: 3, x: 15, y: 20)
-                                .opacity(textOpcity)
+                                .opacity(vm.textOpacity)
                                 .onAppear(perform: {
                                     withAnimation(.easeInOut(duration: 2.0)) {
-                                        textOpcity = 1.0
+                                        vm.textOpacity = 1.0
                                     }
                                 })
                             
@@ -71,8 +65,8 @@ struct OnBoardingView: View {
                     HStack {
                         
                         Capsule()
-                            .fill(capColor)
-                            .frame(width: caluculateWidth() + 65)
+                            .fill(vm.capColor)
+                            .frame(width: vm.caluculateWidth() + 65)
                         
                         Spacer()
                         
@@ -88,15 +82,15 @@ struct OnBoardingView: View {
                         .foregroundColor(.white)
                         .offset(x: 5)
                         .frame(width: 65, height: 65)
-                        .background(capColor)
+                        .background(vm.capColor)
                         .clipShape(Circle())
-                        .offset(x: offset)
+                        .offset(x: vm.offset)
                         .gesture(DragGesture().onChanged(onChange(value:)).onEnded(onEnded(value:)))
                         
                         Spacer()
                     }
                 }
-                .frame(width: maxWidth, height: 65)
+                .frame(width: vm.maxWidth, height: 65)
                 
                 AdBannerView()
                     .frame(width: 320, height: 50, alignment: .center)
@@ -113,32 +107,26 @@ struct OnBoardingView: View {
     //MARK: - Swipe Functions
     
     private func onChange(value : DragGesture.Value) {
-        if value.translation.width > 0 && offset <= maxWidth - 65 {
-            offset = value.translation.width
+        if value.translation.width > 0 && vm.offset <= vm.maxWidth - 65 {
+            vm.offset = value.translation.width
         }
     }
     
     private func onEnded(value : DragGesture.Value) {
-        if offset > 180 {
-            offset = maxWidth - 65
+        if vm.offset > 180 {
+            vm.offset = vm.maxWidth - 65
             model.showBording = false
             
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                offset = 0
+                vm.offset = 0
             }
             
         } else {
-            offset = 0
+            vm.offset = 0
         }
     }
     
-    //MARK: - functions
-    
-    private func caluculateWidth() -> CGFloat {
-        
-        let percent = offset / maxWidth
-        return percent * maxWidth
-    }
+  
 }
 
 struct OnBoardingView_Previews: PreviewProvider {

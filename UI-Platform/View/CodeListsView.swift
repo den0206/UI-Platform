@@ -91,8 +91,10 @@ struct TypeCell : View {
                     
                 }
      
-                Divider()
-                    .background(Color.white)
+                CustomLine()
+                    .stroke(style: StrokeStyle(lineWidth: 1, dash: [5]))
+                    .frame(height: 1)
+                    .foregroundColor(.white)
              
             }
         }

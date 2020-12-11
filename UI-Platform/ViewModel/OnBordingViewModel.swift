@@ -8,12 +8,21 @@
 import Foundation
 import SwiftUI
 
-final class OnBordingViewMode: ObservableObject {
+final class OnBordingViewModel: ObservableObject {
     
     @Published var maxWidth = UIScreen.main.bounds.width - 65
     @Published var offset : CGFloat = 0
-    @State private var textOpacity : Double = 0
+    @Published var textOpacity : Double = 0
     
     let capColor = Color.gray
     let ranColor = Color.random
+    
+
+    //MARK: - functions
+    
+    func caluculateWidth() -> CGFloat {
+        
+        let percent = offset / maxWidth
+        return percent * maxWidth
+    }
 }

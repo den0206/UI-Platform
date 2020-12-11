@@ -12,24 +12,21 @@ import CodeMirror_SwiftUI
 struct HomeView: View {
     
     @EnvironmentObject var model : CodeModel
+    @StateObject var vm = HomeViewModel()
 
-    @State private var showSideMenu = false
-    @State private var fullScreen = false
-    @State private var selectedIndex : Int = 0
-    
     var width = UIScreen.main.bounds.width
 
 
     var body: some View {
         
-        if !fullScreen {
+        if !vm.fullScreen {
             
              ZStack {
                  /// Z1
                  VStack {
                      HStack {
                          Button(action: {
-                             fullScreenMode()
+                            vm.fullScreenMode(envModel: model)
  
                          }) {
                              Image(systemName: "arrow.up.left.and.arrow.down.right")
@@ -49,7 +46,7 @@ struct HomeView: View {
 
                          Button(action: {
                              withAnimation(.spring()) {
-                                 showSideMenu.toggle()
+                                vm.showSideMenu.toggle()
                                  model.showTab = false
                              }
                          }, label: {
@@ -82,7 +79,7 @@ struct HomeView: View {
                              Spacer()
                              Button(action: {
                                  withAnimation(.spring()) {
-                                     showSideMenu.toggle()
+                                    vm.showSideMenu.toggle()
                                      model.showTab = true
                                  }
                              }, label: {
@@ -133,11 +130,11 @@ struct HomeView: View {
                      }
                      .frame(width : width - 100)
                      .background(Color.gray)
-                     .offset(x: showSideMenu ? 0 : width - 100)
+                     .offset(x: vm.showSideMenu ? 0 : width - 100)
                  }
-                 .background(Color.black.opacity(showSideMenu ? 0.3 : 0).onTapGesture {
+                 .background(Color.black.opacity(vm.showSideMenu ? 0.3 : 0).onTapGesture {
                      withAnimation(.spring()) {
-                         self.showSideMenu.toggle()
+                         vm.showSideMenu.toggle()
                          model.showTab = true
                      }
 
@@ -156,7 +153,7 @@ struct HomeView: View {
                 
                 SourceView(codeType: model.codeType)
 
-                if fullScreen{
+                if vm.fullScreen{
                     
                     VStack {
                         
@@ -166,7 +163,7 @@ struct HomeView: View {
                             Spacer()
                             
                             Button(action: {
-                                fullScreenMode()
+                                vm.fullScreenMode(envModel: model)
     
                             }) {
                                 Image(systemName: "arrow.down.right.and.arrow.up.left")
@@ -186,55 +183,6 @@ struct HomeView: View {
        
     }
 
-    func selectedButton(type : CodeType) {
-        /// selef.type = type
-
-        withAnimation(.spring()) {
-            self.showSideMenu.toggle()
-            model.showTab = true
-        }
-
-        self.model.codeType = type
-    }
-    
-    func fullScreenMode() {
-        
-        if fullScreen {
-            
-            DispatchQueue.main.async {
-                AppDelegate.orientationLock = UIInterfaceOrientationMask.portrait
-                UIDevice.current.setValue(UIInterfaceOrientation.portrait.rawValue, forKey: "orientation")
-                UINavigationController.attemptRotationToDeviceOrientation()
-                
-                withAnimation(.spring()) {
-                    model.showTab = true
-                }
-               
-            }
-            
-           
-            
-        } else {
-            DispatchQueue.main.async {
-                AppDelegate.orientationLock = UIInterfaceOrientationMask.landscape
-                UIDevice.current.setValue(UIInterfaceOrientation.landscapeLeft.rawValue, forKey: "orientation")
-                UINavigationController.attemptRotationToDeviceOrientation()
-                
-                withAnimation(.spring()) {
-                    model.showTab = false
-                }
-               
-            }
-            
-            
-            
-            
-        }
-        
-        fullScreen.toggle()
-        
-    }
-    
     /// left & Right Swipe
     
     private func leftRightValue(value : DragGesture.Value) {
@@ -244,13 +192,13 @@ struct HomeView: View {
           
           if (value.translation.width < 0) {
               withAnimation(.spring()) {
-                  showSideMenu = true
+                vm.showSideMenu = true
                   model.showTab = false
             
               }
           } else {
               withAnimation(.spring()) {
-                  showSideMenu = false
+                vm.showSideMenu = false
                   model.showTab = true
               }
           }
