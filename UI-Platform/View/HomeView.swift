@@ -117,6 +117,7 @@ struct HomeView: View {
                                          .foregroundColor(.black)
                                  }
                              }
+                            
                          
                              .labelsHidden()
                              

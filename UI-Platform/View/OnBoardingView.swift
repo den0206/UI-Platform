@@ -13,6 +13,7 @@ struct OnBoardingView: View {
 
     @State private var maxWidth = UIScreen.main.bounds.width - 65
     @State private var offset : CGFloat = 0
+    
     @State private var textOpcity : Double = 0
     let capColor = Color.gray
     let ranColor = Color.random

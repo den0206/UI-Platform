@@ -28,7 +28,7 @@ struct ScrollEffect3DView: View {
                                 .foregroundColor(color)
                                 .frame(width: 200, height: 300, alignment: .center)
                                 .cornerRadius(16)
-                                .shadow(color: Color.black.opacity(0.2), radius: 20, x: 0, y: 0)
+                                .shadow(color: Color.white.opacity(0.8), radius: 20, x: -10, y: 10)
                                 .rotation3DEffect(Angle(degrees: (Double(geometry.frame(in: .global).minX) - 210) / -20), axis: (x: 0, y: 1.0, z: 0))
                                 .onTapGesture {
                                     self.color = color
@@ -36,11 +36,12 @@ struct ScrollEffect3DView: View {
                         }
                     }
                 }
+                .padding(.vertical, 30)
                 .padding(.horizontal, 210)
                 
                 
             }
-            .padding(.vertical, 50)
+            .padding(.vertical, 60)
         }
      
         

@@ -14,7 +14,7 @@ enum CodeType : CaseIterable, Identifiable{
     case StarAnimation
     case WaveAnimation
     case TemperatureControl
-    case RippleAnimation
+    case MenuAnimation
     case Isometric
     case CubeRotation
     case ColorPicker
@@ -25,6 +25,7 @@ enum CodeType : CaseIterable, Identifiable{
     case LiquidSwipe
     case PieChart
     case Circular_Slider
+    case RippleAnimation
     case DairyChart
     case DashBoard
     case VgridSearch
@@ -45,8 +46,8 @@ enum CodeType : CaseIterable, Identifiable{
             return "Wave Animation"
         case .TemperatureControl :
             return "Temperature Control"
-        case .RippleAnimation :
-            return "Ripple Animation"
+        case .MenuAnimation :
+            return "Menu Animation"
         case .Isometric :
             return "Isometric View"
         case .CubeRotation :
@@ -67,6 +68,8 @@ enum CodeType : CaseIterable, Identifiable{
             return "Pie Chart"
         case .Circular_Slider:
             return "Circular Slider"
+        case .RippleAnimation :
+            return "Ripple Animation"
         case .DairyChart :
             return "Dairy Charts"
         case .DashBoard :
@@ -87,8 +90,9 @@ enum CodeType : CaseIterable, Identifiable{
             return "https://www.youtube.com/watch?v=7bXQqnCFkFw"
         case .TemperatureControl :
             return "https://www.youtube.com/embed/yiQjoFTXR8o"
-        case .RippleAnimation :
-            return "https://www.youtube.com/embed/A68abUry2-Q"
+        case .MenuAnimation :
+            return "https://www.youtube.com/embed/wJHBI4uiImk"
+        
         case .Isometric :
             return "https://trailingclosure.com/isometric-viewmodifier/"
         case.CubeRotation :
@@ -103,6 +107,8 @@ enum CodeType : CaseIterable, Identifiable{
             return "https://trailingclosure.com/3d-scroll-effect/"
         case .LiquidSwipe :
             return "https://www.youtube.com/watch?v=BQrrNpgDbEg"
+        case .RippleAnimation :
+            return "https://www.youtube.com/embed/A68abUry2-Q"
         default :
             return "https://www.google.com/"
         }
@@ -127,6 +133,8 @@ enum CodeType : CaseIterable, Identifiable{
             return "WaveAnimationView"
         case .TemperatureControl :
             return "TemperatureControlView"
+        case .MenuAnimation :
+            return "MenuAnimationView"
         case .RippleAnimation :
             return "RippleAnimationView"
         case .Isometric :
@@ -171,6 +179,8 @@ enum CodeType : CaseIterable, Identifiable{
             return AnyView(WaveAnimationView())
         case .TemperatureControl :
             return AnyView(TemperatureControlView())
+        case .MenuAnimation :
+            return AnyView(MenuAnimationView())
         case .RippleAnimation :
             return AnyView(RippleAnimationView())
         case .Isometric :

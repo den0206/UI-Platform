@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0D8EC93DAA415812C6E38CC6 /* Pods_UI_Platform.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA3D33AA55F40A8132802682 /* Pods_UI_Platform.framework */; };
+		3A03B92F2582745700B7478E /* MenuAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A03B92E2582745700B7478E /* MenuAnimationView.swift */; };
+		3A03B93125827C2000B7478E /* MenuAnimationView.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A03B93025827C2000B7478E /* MenuAnimationView.txt */; };
 		3A230124257A4A6800D3FE60 /* CubeRotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A230123257A4A6800D3FE60 /* CubeRotationView.swift */; };
 		3A230126257A4F7300D3FE60 /* CubeRotationView.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A230125257A4F7300D3FE60 /* CubeRotationView.txt */; };
 		3A230129257A50F000D3FE60 /* ScrollEffect3DView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A230128257A50F000D3FE60 /* ScrollEffect3DView.swift */; };
@@ -53,6 +55,7 @@
 		3ACD1DE32571E9A00062B4D9 /* CodeListsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ACD1DE22571E9A00062B4D9 /* CodeListsView.swift */; };
 		3AD2AD2A2577855900FDCFE4 /* DescriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD2AD292577855900FDCFE4 /* DescriptionView.swift */; };
 		3AD7D4A8256FC8F2006387B0 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD7D4A7256FC8F2006387B0 /* MainTabView.swift */; };
+		3AD839EF258392E9000F61BD /* OnBordingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AD839EE258392E9000F61BD /* OnBordingViewModel.swift */; };
 		3ADABB2B256E8EAD00C71FE8 /* CodeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADABB2A256E8EAD00C71FE8 /* CodeModel.swift */; };
 		3ADABB2D256E8F0400C71FE8 /* CodeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADABB2C256E8F0400C71FE8 /* CodeType.swift */; };
 		3ADABB31256E922800C71FE8 /* SourceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADABB30256E922800C71FE8 /* SourceView.swift */; };
@@ -88,6 +91,8 @@
 
 /* Begin PBXFileReference section */
 		224549662844ECDB62B634E7 /* Pods-UI-Platform.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UI-Platform.debug.xcconfig"; path = "Target Support Files/Pods-UI-Platform/Pods-UI-Platform.debug.xcconfig"; sourceTree = "<group>"; };
+		3A03B92E2582745700B7478E /* MenuAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuAnimationView.swift; sourceTree = "<group>"; };
+		3A03B93025827C2000B7478E /* MenuAnimationView.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = MenuAnimationView.txt; sourceTree = "<group>"; };
 		3A230123257A4A6800D3FE60 /* CubeRotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CubeRotationView.swift; sourceTree = "<group>"; };
 		3A230125257A4F7300D3FE60 /* CubeRotationView.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = CubeRotationView.txt; sourceTree = "<group>"; };
 		3A230128257A50F000D3FE60 /* ScrollEffect3DView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollEffect3DView.swift; sourceTree = "<group>"; };
@@ -133,6 +138,7 @@
 		3ACD1DE22571E9A00062B4D9 /* CodeListsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeListsView.swift; sourceTree = "<group>"; };
 		3AD2AD292577855900FDCFE4 /* DescriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptionView.swift; sourceTree = "<group>"; };
 		3AD7D4A7256FC8F2006387B0 /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		3AD839EE258392E9000F61BD /* OnBordingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBordingViewModel.swift; sourceTree = "<group>"; };
 		3ADABB2A256E8EAD00C71FE8 /* CodeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeModel.swift; sourceTree = "<group>"; };
 		3ADABB2C256E8F0400C71FE8 /* CodeType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeType.swift; sourceTree = "<group>"; };
 		3ADABB30256E922800C71FE8 /* SourceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SourceView.swift; sourceTree = "<group>"; };
@@ -167,6 +173,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3A03B92D2582744000B7478E /* MenuAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				3A03B92E2582745700B7478E /* MenuAnimationView.swift */,
+				3A03B93025827C2000B7478E /* MenuAnimationView.txt */,
+			);
+			path = MenuAnimation;
+			sourceTree = "<group>";
+		};
 		3A230122257A4A4600D3FE60 /* CubeRotation */ = {
 			isa = PBXGroup;
 			children = (
@@ -255,6 +270,7 @@
 			children = (
 				3A57E7F2256D2B5D00810209 /* UI_PlatformApp.swift */,
 				3ADABB27256E8BED00C71FE8 /* Model */,
+				3AD839ED258392C8000F61BD /* ViewModel */,
 				3A57E807256D2BB400810209 /* View */,
 				3A57E80A256D2D0600810209 /* CodeSorce */,
 				3ABE66F2257380BA006D7F5D /* Movies */,
@@ -389,7 +405,7 @@
 				3A35114D2580A5C300FB3C94 /* StarAnimation */,
 				3ACCB4D72575415C000EFB99 /* WaveAnimation */,
 				3AFC2565257E554E008A186C /* TemperatureControl */,
-				3AF406352577CB0900340555 /* RippleAnimation */,
+				3A03B92D2582744000B7478E /* MenuAnimation */,
 				3A230122257A4A4600D3FE60 /* CubeRotation */,
 				3AB331AF257C86EB003409CE /* IsometicView */,
 				3AE49DD72579154600DE5655 /* ColorPicker */,
@@ -399,12 +415,21 @@
 				3A9CE8F825792DFB0066409F /* CardType */,
 				3A230127257A50D600D3FE60 /* 3DScrollEffect */,
 				3ABB640B2572316E002E2AA6 /* CircularSlider */,
+				3AF406352577CB0900340555 /* RippleAnimation */,
 				3A48FE8B25723A4B0055BA9F /* PieChart */,
 				3ABE66F7257382DD006D7F5D /* DairyCharts */,
 				3AE4D41F25739038001185B7 /* DashBoard */,
 				3A278A7125739A8C007EC881 /* VgridSearch */,
 			);
 			path = SampleViews;
+			sourceTree = "<group>";
+		};
+		3AD839ED258392C8000F61BD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				3AD839EE258392E9000F61BD /* OnBordingViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		3ADABB27256E8BED00C71FE8 /* Model */ = {
@@ -547,6 +572,7 @@
 				3ABE66F525738109006D7F5D /* code-1.mp4 in Resources */,
 				3AE49DDC25791AB200DE5655 /* ColorPickerView.txt in Resources */,
 				3ABE66F625738109006D7F5D /* code-2.mp4 in Resources */,
+				3A03B93125827C2000B7478E /* MenuAnimationView.txt in Resources */,
 				3AE4D423257391F8001185B7 /* DashboardView.txt in Resources */,
 				3AFC256B257E62DE008A186C /* TemperatureControlView.txt in Resources */,
 				3A3511512580B32300FB3C94 /* StarAnimationView.txt in Resources */,
@@ -627,6 +653,7 @@
 				3A9FFBCA25768C8F006D7886 /* LiquidSwipeView.swift in Sources */,
 				3AD7D4A8256FC8F2006387B0 /* MainTabView.swift in Sources */,
 				3AADB49825736E3D005BA1FF /* LoopBackgroundView.swift in Sources */,
+				3AD839EF258392E9000F61BD /* OnBordingViewModel.swift in Sources */,
 				3A273349257FB54500236BF7 /* JoyStickView.swift in Sources */,
 				3A3641D2257B31540079426F /* AdMob.swift in Sources */,
 				3ADABB31256E922800C71FE8 /* SourceView.swift in Sources */,
@@ -649,6 +676,7 @@
 				3AFC2567257E5565008A186C /* TemperatureControlView.swift in Sources */,
 				3A230129257A50F000D3FE60 /* ScrollEffect3DView.swift in Sources */,
 				3AADB49625736D53005BA1FF /* LoopMovieView.swift in Sources */,
+				3A03B92F2582745700B7478E /* MenuAnimationView.swift in Sources */,
 				3AADB49A25737165005BA1FF /* Extensions.swift in Sources */,
 				3A35114F2580A5DB00FB3C94 /* StarAnimationView.swift in Sources */,
 				3AE4D4212573904B001185B7 /* DashboardView.swift in Sources */,
