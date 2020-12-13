@@ -31,7 +31,11 @@
 		3A57E804256D2B9C00810209 /* CodeMirror-SwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 3A57E803256D2B9C00810209 /* CodeMirror-SwiftUI */; };
 		3A57E805256D2B9C00810209 /* CodeMirror-SwiftUI in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 3A57E803256D2B9C00810209 /* CodeMirror-SwiftUI */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		3A57E80E256D2D9F00810209 /* Demo.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A57E80D256D2D9F00810209 /* Demo.txt */; };
+		3A67C3A02585104A00E1228B /* WaterfallLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A67C39F2585104A00E1228B /* WaterfallLayoutView.swift */; };
+		3A67C3A22585182C00E1228B /* WaterfallLayoutView.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A67C3A12585182C00E1228B /* WaterfallLayoutView.txt */; };
 		3A6E921C257B36F500650F21 /* secKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E921B257B36F500650F21 /* secKey.swift */; };
+		3A7B1A8E25845F8100AC4451 /* ExpandingButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7B1A8D25845F8100AC4451 /* ExpandingButtonView.swift */; };
+		3A7B1A902584676D00AC4451 /* ExpandingButtonView.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A7B1A8F2584676D00AC4451 /* ExpandingButtonView.txt */; };
 		3A852088257A5A3800996913 /* ScrollEffect3DView.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A852087257A5A3800996913 /* ScrollEffect3DView.txt */; };
 		3A9CE8FA25792E110066409F /* CardTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A9CE8F925792E110066409F /* CardTypeView.swift */; };
 		3A9CE8FC257939F50066409F /* CardTypeView.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A9CE8FB257939F50066409F /* CardTypeView.txt */; };
@@ -115,7 +119,11 @@
 		3A57E7F9256D2B5E00810209 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3A57E7FB256D2B5E00810209 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3A57E80D256D2D9F00810209 /* Demo.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Demo.txt; sourceTree = "<group>"; };
+		3A67C39F2585104A00E1228B /* WaterfallLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallLayoutView.swift; sourceTree = "<group>"; };
+		3A67C3A12585182C00E1228B /* WaterfallLayoutView.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = WaterfallLayoutView.txt; sourceTree = "<group>"; };
 		3A6E921B257B36F500650F21 /* secKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secKey.swift; sourceTree = "<group>"; };
+		3A7B1A8D25845F8100AC4451 /* ExpandingButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandingButtonView.swift; sourceTree = "<group>"; };
+		3A7B1A8F2584676D00AC4451 /* ExpandingButtonView.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ExpandingButtonView.txt; sourceTree = "<group>"; };
 		3A852087257A5A3800996913 /* ScrollEffect3DView.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ScrollEffect3DView.txt; sourceTree = "<group>"; };
 		3A9CE8F925792E110066409F /* CardTypeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardTypeView.swift; sourceTree = "<group>"; };
 		3A9CE8FB257939F50066409F /* CardTypeView.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = CardTypeView.txt; sourceTree = "<group>"; };
@@ -319,6 +327,24 @@
 			path = CodeSorce;
 			sourceTree = "<group>";
 		};
+		3A67C39E2585103200E1228B /* WaterfallLayout */ = {
+			isa = PBXGroup;
+			children = (
+				3A67C39F2585104A00E1228B /* WaterfallLayoutView.swift */,
+				3A67C3A12585182C00E1228B /* WaterfallLayoutView.txt */,
+			);
+			path = WaterfallLayout;
+			sourceTree = "<group>";
+		};
+		3A7B1A8C25845EF800AC4451 /* ExpandingButton */ = {
+			isa = PBXGroup;
+			children = (
+				3A7B1A8D25845F8100AC4451 /* ExpandingButtonView.swift */,
+				3A7B1A8F2584676D00AC4451 /* ExpandingButtonView.txt */,
+			);
+			path = ExpandingButton;
+			sourceTree = "<group>";
+		};
 		3A9CE8F825792DFB0066409F /* CardType */ = {
 			isa = PBXGroup;
 			children = (
@@ -408,10 +434,12 @@
 				3ACCB4D72575415C000EFB99 /* WaveAnimation */,
 				3AFC2565257E554E008A186C /* TemperatureControl */,
 				3A03B92D2582744000B7478E /* MenuAnimation */,
+				3A7B1A8C25845EF800AC4451 /* ExpandingButton */,
 				3A230122257A4A4600D3FE60 /* CubeRotation */,
 				3AB331AF257C86EB003409CE /* IsometicView */,
 				3AE49DD72579154600DE5655 /* ColorPicker */,
 				3AE3834B257B726900468703 /* StarRating */,
+				3A67C39E2585103200E1228B /* WaterfallLayout */,
 				3AAEBA2C25711A1400500142 /* AnalogClock */,
 				3A9FFBC825768C69006D7886 /* LiquidSwipeView */,
 				3A9CE8F825792DFB0066409F /* CardType */,
@@ -579,6 +607,7 @@
 				3AE4D423257391F8001185B7 /* DashboardView.txt in Resources */,
 				3AFC256B257E62DE008A186C /* TemperatureControlView.txt in Resources */,
 				3A3511512580B32300FB3C94 /* StarAnimationView.txt in Resources */,
+				3A7B1A902584676D00AC4451 /* ExpandingButtonView.txt in Resources */,
 				3A27334B257FC47900236BF7 /* JoyStickView.txt in Resources */,
 				3AE4D41E25738EB8001185B7 /* Dairy_ChartsView.txt in Resources */,
 				3AFC2569257E55AA008A186C /* IsometricView.txt in Resources */,
@@ -593,6 +622,7 @@
 				3A9FFBCC25768ED9006D7886 /* LiquidSwipeView.txt in Resources */,
 				3AF4063A2577CF5E00340555 /* RippleAnimationView.txt in Resources */,
 				3A278A7525739BB9007EC881 /* VgridSearchView.txt in Resources */,
+				3A67C3A22585182C00E1228B /* WaterfallLayoutView.txt in Resources */,
 				3A48FE8A257236010055BA9F /* Circular_SliderView.txt in Resources */,
 				3A57E80E256D2D9F00810209 /* Demo.txt in Resources */,
 				3AB331AE257C8277003409CE /* StarRatingView.txt in Resources */,
@@ -657,6 +687,7 @@
 				3A9FFBCA25768C8F006D7886 /* LiquidSwipeView.swift in Sources */,
 				3AD7D4A8256FC8F2006387B0 /* MainTabView.swift in Sources */,
 				3AADB49825736E3D005BA1FF /* LoopBackgroundView.swift in Sources */,
+				3A67C3A02585104A00E1228B /* WaterfallLayoutView.swift in Sources */,
 				3AD839EF258392E9000F61BD /* OnBordingViewModel.swift in Sources */,
 				3A273349257FB54500236BF7 /* JoyStickView.swift in Sources */,
 				3A3641D2257B31540079426F /* AdMob.swift in Sources */,
@@ -682,6 +713,7 @@
 				3AADB49625736D53005BA1FF /* LoopMovieView.swift in Sources */,
 				3A03B92F2582745700B7478E /* MenuAnimationView.swift in Sources */,
 				3AADB49A25737165005BA1FF /* Extensions.swift in Sources */,
+				3A7B1A8E25845F8100AC4451 /* ExpandingButtonView.swift in Sources */,
 				3A35114F2580A5DB00FB3C94 /* StarAnimationView.swift in Sources */,
 				3AE4D4212573904B001185B7 /* DashboardView.swift in Sources */,
 				3ADABB2D256E8F0400C71FE8 /* CodeType.swift in Sources */,

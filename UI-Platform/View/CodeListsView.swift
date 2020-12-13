@@ -14,7 +14,6 @@ struct CodeListsView: View {
     
     var body: some View {
 
-        
         VStack {
             
             if isSheet {
@@ -74,7 +73,7 @@ struct TypeCell : View {
             
             VStack {
                 HStack {
-                    Text("\(type.title)")
+                    Text("∙\(type.title)")
                         .font(.headline)
                         .foregroundColor(.primary)
                         .padding(.leading,10)

@@ -1,0 +1,109 @@
+//
+//  ExpandingButtonView.swift
+//  UI-Platform
+//
+//  Created by 酒井ゆうき on 2020/12/12.
+//
+
+import SwiftUI
+
+struct ExpandingButtonView: View {
+    
+    @State private var selected = ""
+    
+    var body: some View {
+        
+        ZStack {
+            
+            Text(selected)
+                .foregroundColor(.white)
+                .font(.title)
+            
+            VStack {
+                Spacer()
+                HStack {
+                    Spacer()
+                    ExpandingButton(primaryButton: ExpandingButtonItem(imageName: "plus", action: nil),
+                                    secoundaryItems: [
+                                        ExpandingButtonItem(imageName: "paperclip.circle.fill", color : Color.random, action: {selected = "Clip"}),
+                                        ExpandingButtonItem(imageName: "arrow.down.doc.fill", color : Color.random, action: {selected = "Arrow"}),
+                                        ExpandingButtonItem(imageName: "book.circle.fill", color : Color.random, action: {selected = "Book"}),
+                                    ])
+                        .padding()
+                }
+               
+            }
+            
+        }
+        .preferredColorScheme(.dark)
+        
+    }
+}
+
+struct  ExpandingButtonItem : Identifiable {
+    let id = UUID()
+    let imageName : String
+    var color : Color = Color.black
+    
+    private(set) var action : (() -> Void)? = nil
+}
+
+struct ExpandingButton : View {
+    
+    let primaryButton : ExpandingButtonItem
+    let secoundaryItems : [ExpandingButtonItem]
+    
+    private let noop : () -> Void = {}
+    private let size : CGFloat = 70
+    
+    private var cornarRadius : CGFloat {
+        return size / 2
+    }
+    
+    private let shadowColor = Color.black.opacity(0.4)
+    private let shadowPosition : (x : CGFloat, y : CGFloat) = (x : 2, y : 2)
+    private let shadowRadius : CGFloat = 3
+    
+    @State private var isExpanded = false
+    
+    
+    var body: some View {
+        VStack {
+            ForEach(secoundaryItems) { item in
+                
+                Button(action: {(item.action ?? self.noop)()}) {
+                    Image(systemName: item.imageName)
+                        
+                        
+                }
+                .foregroundColor(item.color)
+                .frame(width: isExpanded ? self.size : 0,height:isExpanded ? self.size : 0)
+                
+            }
+            
+            Button(action: {
+                withAnimation {
+                    isExpanded.toggle()
+                }
+                self.primaryButton.action?()
+            }) {
+                Image(systemName: primaryButton.imageName)
+
+            }
+            .foregroundColor(primaryButton.color)
+            .frame(width: size, height: size)
+        
+            
+        }
+        .background(Color.green)
+        .cornerRadius(cornarRadius)
+        .font(.title)
+        .shadow(color: shadowColor, radius: shadowRadius, x: shadowPosition.x, y: shadowPosition.y)
+    }
+}
+
+struct ExpandingButtonView_Previews: PreviewProvider {
+    static var previews: some View {
+        ExpandingButtonView()
+    }
+}

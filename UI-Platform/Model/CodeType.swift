@@ -15,10 +15,12 @@ enum CodeType : CaseIterable, Identifiable{
     case WaveAnimation
     case TemperatureControl
     case MenuAnimation
+    case ExpandingButton
     case Isometric
     case CubeRotation
     case ColorPicker
     case StarRating
+    case WaterfallLayout
     case AnalogClock
     case CardType
     case ScrollEffect3D
@@ -48,6 +50,8 @@ enum CodeType : CaseIterable, Identifiable{
             return "Temperature Control"
         case .MenuAnimation :
             return "Menu Animation"
+        case .ExpandingButton :
+            return "Expanding Button"
         case .Isometric :
             return "Isometric View"
         case .CubeRotation :
@@ -56,6 +60,8 @@ enum CodeType : CaseIterable, Identifiable{
             return "Color picker"
         case .StarRating :
             return "Star Rating"
+        case .WaterfallLayout :
+            return "Waterfall Layout"
         case .AnalogClock :
             return  "Analog Clock"
         case .CardType :
@@ -92,7 +98,8 @@ enum CodeType : CaseIterable, Identifiable{
             return "https://www.youtube.com/embed/yiQjoFTXR8o"
         case .MenuAnimation :
             return "https://www.youtube.com/embed/wJHBI4uiImk"
-        
+        case .ExpandingButton :
+            return "https://laptrinhx.com/expandable-button-in-swiftui-435479505/"
         case .Isometric :
             return "https://trailingclosure.com/isometric-viewmodifier/"
         case.CubeRotation :
@@ -101,6 +108,8 @@ enum CodeType : CaseIterable, Identifiable{
             return "https://www.youtube.com/embed/tljAOx7tbKI"
         case .StarRating :
             return "https://trailingclosure.com/popup-review-button-using-swiftui/"
+        case .WaterfallLayout :
+            return "https://www.youtube.com/embed/KlS7h1OCgsY"
         case .CardType :
             return "https://www.youtube.com/embed/gHWmlxQueR4"
         case .ScrollEffect3D :
@@ -135,6 +144,8 @@ enum CodeType : CaseIterable, Identifiable{
             return "TemperatureControlView"
         case .MenuAnimation :
             return "MenuAnimationView"
+        case .ExpandingButton :
+            return "ExpandingButtonView"
         case .RippleAnimation :
             return "RippleAnimationView"
         case .Isometric :
@@ -145,6 +156,8 @@ enum CodeType : CaseIterable, Identifiable{
             return "ColorPickerView"
         case .StarRating :
             return "StarRatingView"
+        case .WaterfallLayout :
+            return "WaterfallLayoutView"
         case .AnalogClock :
             return "AnalogClockView"
         case .CardType :
@@ -181,6 +194,8 @@ enum CodeType : CaseIterable, Identifiable{
             return AnyView(TemperatureControlView())
         case .MenuAnimation :
             return AnyView(MenuAnimationView())
+        case .ExpandingButton :
+            return AnyView(ExpandingButtonView())
         case .RippleAnimation :
             return AnyView(RippleAnimationView())
         case .Isometric :
@@ -191,6 +206,8 @@ enum CodeType : CaseIterable, Identifiable{
             return AnyView(ColorPickerView())
         case .StarRating :
             return AnyView(StarRatingView())
+        case .WaterfallLayout :
+            return AnyView(WaterfallLayoutView())
         case .AnalogClock :
             return AnyView(AnalogClockView())
         case .CardType :

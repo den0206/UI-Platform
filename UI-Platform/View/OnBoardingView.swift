@@ -10,7 +10,6 @@ import SwiftUI
 struct OnBoardingView: View {
     
     @EnvironmentObject var model : CodeModel
-    
     @StateObject var vm = OnBordingViewModel()
     
     var body: some View {

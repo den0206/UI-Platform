@@ -83,7 +83,7 @@ final class CodeModel : ObservableObject {
         /// change Tab
         self.tabIndex = 0
         
-        if typeIndex % 3 == 0 {
+        if typeIndex % adInterval == 0 {
             /// ad
             interstitalView.showAd()
 

@@ -7,8 +7,6 @@
 
 import SwiftUI
 
-
-
 struct ExampleView: View {
     
     enum exampleSheetView : Identifiable {
@@ -29,7 +27,6 @@ struct ExampleView: View {
     var body: some View {
         
         NavigationView {
-            
             
                 model.codeType.rootView
                     .offset(x: viewX)
