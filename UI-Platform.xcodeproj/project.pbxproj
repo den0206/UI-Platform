@@ -34,6 +34,7 @@
 		3A67C3A02585104A00E1228B /* WaterfallLayoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A67C39F2585104A00E1228B /* WaterfallLayoutView.swift */; };
 		3A67C3A22585182C00E1228B /* WaterfallLayoutView.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A67C3A12585182C00E1228B /* WaterfallLayoutView.txt */; };
 		3A6E921C257B36F500650F21 /* secKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6E921B257B36F500650F21 /* secKey.swift */; };
+		3A7A5D1925D6C4E100417442 /* SwipeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7A5D1825D6C4E100417442 /* SwipeHeaderView.swift */; };
 		3A7B1A8E25845F8100AC4451 /* ExpandingButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7B1A8D25845F8100AC4451 /* ExpandingButtonView.swift */; };
 		3A7B1A902584676D00AC4451 /* ExpandingButtonView.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A7B1A8F2584676D00AC4451 /* ExpandingButtonView.txt */; };
 		3A852088257A5A3800996913 /* ScrollEffect3DView.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3A852087257A5A3800996913 /* ScrollEffect3DView.txt */; };
@@ -73,6 +74,7 @@
 		3AE4D41E25738EB8001185B7 /* Dairy_ChartsView.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3AE4D41D25738EB8001185B7 /* Dairy_ChartsView.txt */; };
 		3AE4D4212573904B001185B7 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE4D4202573904B001185B7 /* DashboardView.swift */; };
 		3AE4D423257391F8001185B7 /* DashboardView.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3AE4D422257391F8001185B7 /* DashboardView.txt */; };
+		3AE6F3EE25D9533E00FBCB15 /* SwipeHeaderView.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3AE6F3ED25D9533E00FBCB15 /* SwipeHeaderView.txt */; };
 		3AF406372577CB2A00340555 /* RippleAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF406362577CB2A00340555 /* RippleAnimationView.swift */; };
 		3AF4063A2577CF5E00340555 /* RippleAnimationView.txt in Resources */ = {isa = PBXBuildFile; fileRef = 3AF406392577CF5E00340555 /* RippleAnimationView.txt */; };
 		3AFC2567257E5565008A186C /* TemperatureControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AFC2566257E5565008A186C /* TemperatureControlView.swift */; };
@@ -122,6 +124,7 @@
 		3A67C39F2585104A00E1228B /* WaterfallLayoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaterfallLayoutView.swift; sourceTree = "<group>"; };
 		3A67C3A12585182C00E1228B /* WaterfallLayoutView.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = WaterfallLayoutView.txt; sourceTree = "<group>"; };
 		3A6E921B257B36F500650F21 /* secKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secKey.swift; sourceTree = "<group>"; };
+		3A7A5D1825D6C4E100417442 /* SwipeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwipeHeaderView.swift; sourceTree = "<group>"; };
 		3A7B1A8D25845F8100AC4451 /* ExpandingButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandingButtonView.swift; sourceTree = "<group>"; };
 		3A7B1A8F2584676D00AC4451 /* ExpandingButtonView.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ExpandingButtonView.txt; sourceTree = "<group>"; };
 		3A852087257A5A3800996913 /* ScrollEffect3DView.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ScrollEffect3DView.txt; sourceTree = "<group>"; };
@@ -161,6 +164,7 @@
 		3AE4D41D25738EB8001185B7 /* Dairy_ChartsView.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = Dairy_ChartsView.txt; sourceTree = "<group>"; };
 		3AE4D4202573904B001185B7 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		3AE4D422257391F8001185B7 /* DashboardView.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = DashboardView.txt; sourceTree = "<group>"; };
+		3AE6F3ED25D9533E00FBCB15 /* SwipeHeaderView.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = SwipeHeaderView.txt; sourceTree = "<group>"; };
 		3AF406362577CB2A00340555 /* RippleAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RippleAnimationView.swift; sourceTree = "<group>"; };
 		3AF406392577CF5E00340555 /* RippleAnimationView.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = RippleAnimationView.txt; sourceTree = "<group>"; };
 		3AFC2566257E5565008A186C /* TemperatureControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureControlView.swift; sourceTree = "<group>"; };
@@ -336,6 +340,15 @@
 			path = WaterfallLayout;
 			sourceTree = "<group>";
 		};
+		3A7A5D1725D6C4C700417442 /* SwipeHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				3A7A5D1825D6C4E100417442 /* SwipeHeaderView.swift */,
+				3AE6F3ED25D9533E00FBCB15 /* SwipeHeaderView.txt */,
+			);
+			path = SwipeHeaderView;
+			sourceTree = "<group>";
+		};
 		3A7B1A8C25845EF800AC4451 /* ExpandingButton */ = {
 			isa = PBXGroup;
 			children = (
@@ -438,6 +451,7 @@
 				3A230122257A4A4600D3FE60 /* CubeRotation */,
 				3AB331AF257C86EB003409CE /* IsometicView */,
 				3AE49DD72579154600DE5655 /* ColorPicker */,
+				3A7A5D1725D6C4C700417442 /* SwipeHeaderView */,
 				3AE3834B257B726900468703 /* StarRating */,
 				3A67C39E2585103200E1228B /* WaterfallLayout */,
 				3AAEBA2C25711A1400500142 /* AnalogClock */,
@@ -607,6 +621,7 @@
 				3AE4D423257391F8001185B7 /* DashboardView.txt in Resources */,
 				3AFC256B257E62DE008A186C /* TemperatureControlView.txt in Resources */,
 				3A3511512580B32300FB3C94 /* StarAnimationView.txt in Resources */,
+				3AE6F3EE25D9533E00FBCB15 /* SwipeHeaderView.txt in Resources */,
 				3A7B1A902584676D00AC4451 /* ExpandingButtonView.txt in Resources */,
 				3A27334B257FC47900236BF7 /* JoyStickView.txt in Resources */,
 				3AE4D41E25738EB8001185B7 /* Dairy_ChartsView.txt in Resources */,
@@ -691,6 +706,7 @@
 				3AD839EF258392E9000F61BD /* OnBordingViewModel.swift in Sources */,
 				3A273349257FB54500236BF7 /* JoyStickView.swift in Sources */,
 				3A3641D2257B31540079426F /* AdMob.swift in Sources */,
+				3A7A5D1925D6C4E100417442 /* SwipeHeaderView.swift in Sources */,
 				3ADABB31256E922800C71FE8 /* SourceView.swift in Sources */,
 				3ADABB2B256E8EAD00C71FE8 /* CodeModel.swift in Sources */,
 				3AE49DD92579156300DE5655 /* ColorPickerView.swift in Sources */,

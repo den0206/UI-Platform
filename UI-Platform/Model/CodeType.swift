@@ -106,6 +106,7 @@ enum CodeType : CaseIterable, Identifiable{
             return "https://trailingclosure.com/cube-rotation-transition/"
         case .ColorPicker :
             return "https://www.youtube.com/embed/tljAOx7tbKI"
+      
         case .StarRating :
             return "https://trailingclosure.com/popup-review-button-using-swiftui/"
         case .WaterfallLayout :
@@ -154,6 +155,7 @@ enum CodeType : CaseIterable, Identifiable{
             return "CubeRotationView"
         case .ColorPicker :
             return "ColorPickerView"
+    
         case .StarRating :
             return "StarRatingView"
         case .WaterfallLayout :
@@ -204,6 +206,7 @@ enum CodeType : CaseIterable, Identifiable{
             return AnyView(CubeRotationView())
         case .ColorPicker :
             return AnyView(ColorPickerView())
+  
         case .StarRating :
             return AnyView(StarRatingView())
         case .WaterfallLayout :
